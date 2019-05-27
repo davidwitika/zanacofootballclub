@@ -1,6 +1,8 @@
 <?php namespace emedia\TeamManagement\Models;
 
 use Model;
+Use \Carbon\Carbon;
+
 
 /**
  * Model
@@ -11,7 +13,7 @@ class Matches extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at','match_date'];
 
 
     /**
@@ -38,4 +40,14 @@ class Matches extends Model
             'otherkey' => 'id'
         ]
     ];
+
+     public function scopeFixtures($query)
+    {
+        return $query->where('match_date', '>', Carbon::now());
+    }
+
+     public function scopeMatches($query)
+    {
+        return $query->where('match_date', '<', Carbon::now());
+    }
 }

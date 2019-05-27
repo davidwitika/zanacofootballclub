@@ -9,7 +9,7 @@ crumb_disabled = 0
 
 [builderList fixtures]
 modelClass = "emedia\TeamManagement\Models\Matches"
-scope = "-"
+scope = "scopeFixtures"
 scopeValue = "{{ :scope }}"
 displayColumn = "match_date"
 noRecordsMessage = "No records found"
@@ -22,7 +22,6 @@ pageNumber = "{{ :page }}"
 <div class="site-content">
     <div class="container">
         {% set fixtures = fixtures.records %}
-        {% set fixtures = fixtures.records.where('match_date', '>=', date()) %}s
         <!-- Schedule & Tickets -->
         <div class="card card--has-table">
             <div class="card__header">

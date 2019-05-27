@@ -1,0 +1,70 @@
+title = "Matches"
+url = "/my-zanaco/matches"
+layout = "master"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[builderList matches]
+modelClass = "emedia\TeamManagement\Models\Matches"
+scope = "scopeMatches"
+scopeValue = "{{ :scope }}"
+displayColumn = "match_date"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<div class="site-content">
+			<div class="container">
+				 {% set results = matches.records %}
+				 {{ matches|json_encode }}
+				<!-- Team Latest Results -->
+				<div class="card card--has-table">
+					<div class="card__header card__header--has-btn">
+						<h4>Latest Results</h4>
+					
+					</div>
+					<div class="card__content">
+						<div class="table-responsive">
+							<table class="table table-hover team-result">
+								<thead>
+									<tr>
+										<th class="team-result__date">Date</th>
+										<th class="team-result__vs">Versus</th>
+										<th class="team-result__score">Score</th>
+										<th class="team-result__status">Status</th>
+									
+									</tr>
+								</thead>
+								<tbody>
+									 {% for result in results %}
+									<tr>
+										<td class="team-result__date">{{ result.match_date | strftime('%e %B %Y') }}</td>
+										<td class="team-result__vs">
+											<div class="team-meta">
+												<figure class="team-meta__logo">
+													<img src="assets/images/samples/logos/sharks_shield.png" alt="">
+												</figure>
+												<div class="team-meta__info">
+													<h6 class="team-meta__name">{{ result.match_team_away.name }}</h6>
+													<span class="team-meta__place">Marine College</span>
+												</div>
+											</div>
+										</td>
+										<td class="team-result__score"><span class="team-result__game">W</span> 2-0</td>
+										<td class="team-result__status">Home</td>
+										
+									</tr>
+								   {% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- Team Latest Results / End -->
+		
+			</div>
+		</div>
