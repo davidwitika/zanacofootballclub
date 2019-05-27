@@ -1,0 +1,41 @@
+title = "Home"
+url = "/"
+layout = "master"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[staticBreadcrumbs breadcrumbs]
+
+[siteSearchInclude]
+==
+<?php
+function onEnd()
+{
+    $this->page->hero_unit_slider = true;
+}
+?>
+==
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+            <div class="content col-md-8">
+                <!-- Featured News -->
+                <!-- Featured News / End -->
+            </div>
+            <!-- Content / End -->
+            <!-- Sidebar -->
+            <div id="sidebar" class="sidebar col-md-4">
+                {% partial 'widgets/widget-preview' %}
+                {% partial 'widgets/widget-standings' %}
+                {% partial 'widgets/widget-social-condensed' %}
+                {% partial 'widgets/widget-player' %}
+                {% partial 'widgets/widget-game-result' %}
+            </div>
+            <!-- Sidebar / End -->
+        </div>
+    </div>
+</div>

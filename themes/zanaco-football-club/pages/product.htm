@@ -1,0 +1,28 @@
+title = "Product"
+url = "/shop/product/:slug/"
+layout = "master"
+is_hidden = 0
+child_of = "shop"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[ProductData]
+
+[ProductPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+==
+<div class="site-content">
+    <div class="container">
+
+    	{% set obProduct = ProductPage.get() %}
+        <!-- Single Product -->
+        <div class="products products--list products--list-lg">
+         	{% partial 'product/default' obProduct=obProduct %}
+        </div>
+        <!-- Single Product / End -->
+        {% partial 'shop/product-tabs' obProduct=obProduct %}
+    </div>
+</div>

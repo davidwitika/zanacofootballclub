@@ -1,0 +1,7 @@
+columns:
+    score_home:
+        label: 'Score Home'
+        type: number
+    score_away:
+        label: 'Score Away'
+        type: number

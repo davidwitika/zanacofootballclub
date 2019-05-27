@@ -1,0 +1,18 @@
+<li class="product__item card">
+    <div class="product__img">
+        <div class="product__img-holder">
+            <a href="{{ productPage|page({slug: item.slug, variant: item.variantId}) }}">{% partial __SELF__ ~ '::image' image=item.image %}</a>
+        </div>
+    </div>
+    <div class="product__content card__content">
+        <header class="product__header">
+            <div class="product__header-inner">
+                <h2 class="product__title"><a href="{{ productPage|page({slug: item.slug, variant: item.variantId}) }}">{{ item.name }}</a></h2>
+                {% set price = item.price() %}
+                <div class="product__price">
+                    {{ price.string | raw }}
+                </div>
+            </div>
+        </header>
+    </div>
+</li>

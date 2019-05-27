@@ -1,0 +1,4 @@
+title: Teams
+modelClass: emedia\TeamManagement\Models\Teams
+toolbar:
+    buttons: reorder_toolbar

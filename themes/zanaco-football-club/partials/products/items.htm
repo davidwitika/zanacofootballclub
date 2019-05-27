@@ -1,0 +1,5 @@
+<ul class="products products--grid products--grid-condensed products--grid-light">
+    {% for item in items %}
+    	{% partial __SELF__ ~ '::item' item=item %}
+    {% endfor %}
+</ul>

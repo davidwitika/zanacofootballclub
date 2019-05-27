@@ -1,0 +1,10 @@
+name: Matches
+form: $/emedia/teammanagement/models/matches/fields.yaml
+modelClass: emedia\TeamManagement\Models\Matches
+defaultRedirect: emedia/teammanagement/matches
+create:
+    redirect: 'emedia/teammanagement/matches/update/:id'
+    redirectClose: emedia/teammanagement/matches
+update:
+    redirect: emedia/teammanagement/matches
+    redirectClose: emedia/teammanagement/matches

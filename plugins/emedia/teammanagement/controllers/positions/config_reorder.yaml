@@ -1,0 +1,4 @@
+title: Positions
+modelClass: emedia\TeamManagement\Models\Positions
+toolbar:
+    buttons: reorder_toolbar

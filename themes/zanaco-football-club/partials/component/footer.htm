@@ -1,0 +1,70 @@
+[viewBag]
+
+[staticMenu footerNavigation]
+code = "footer-navigation"
+==
+<!-- Footer
+================================================== -->
+<footer id="footer" class="footer">
+
+	<!-- Footer Widgets -->
+	<div class="footer-widgets">
+		<div class="footer-widgets__inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 offset-sm-4">
+						<div class="footer-col-inner mx-auto d-block">
+
+							<!-- Footer Logo / End -->
+							<!-- Widget: Contact Info -->
+							<div class="widget widget--footer widget-contact-info">
+								<div class="widget__content">
+									<div class="widget-contact-info__body info-block">
+										
+										<div class="info-block__item info-block__item--nopadding">
+											<ul class="social-links">
+												<!-- Dynamic Social Media Links -->		
+												<li class="social-links__item">
+													<a href="#" class="social-links__link"><i class="fa fa-facebook"></i> Facebook</a>
+												</li>
+												<li class="social-links__item">
+													<a href="#" class="social-links__link"><i class="fa fa-twitter"></i> Twitter</a>
+												</li>
+												<li class="social-links__item">
+													<a href="#" class="social-links__link"><i class="fa fa-instagram"></i> Instagram</a>
+												</li>
+											</ul>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Widget: Contact Info / End -->
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Footer Widgets / End -->
+
+	<!-- Footer Secondary -->
+	<div class="footer-secondary">
+		<div class="container">
+			<div class="footer-secondary__inner">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="footer-copyright"><a href="_soccer_index.html">ZANACO</a> 2019 &nbsp; | &nbsp; All Rights Reserved</div>
+					</div>
+					<div class="col-md-8">
+                        {% partial 'component/footer-menu-items' items=footerNavigation.menuItems %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Secondary / End -->
+</footer>
+<!-- Footer / End -->

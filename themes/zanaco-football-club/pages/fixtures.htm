@@ -1,0 +1,79 @@
+title = "Fixtures"
+url = "/my-zanaco/fixtures"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[builderList fixtures]
+modelClass = "emedia\TeamManagement\Models\Matches"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "match_date"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[siteSearchInclude]
+==
+<div class="site-content">
+    <div class="container">
+        {% set fixtures = fixtures.records %}
+        {% set fixtures = fixtures.records.where('match_date', '>=', date()) %}s
+        <!-- Schedule & Tickets -->
+        <div class="card card--has-table">
+            <div class="card__header">
+                <h4>Fixtures</h4>
+            </div>
+            <div class="card__content">
+                <div class="table-responsive">
+                    <table class="table table-hover team-schedule team-schedule--full">
+                        <thead>
+                            <tr>
+                                <th class="team-schedule__date">Date</th>
+                                <th class="team-schedule__versus">Versus</th>
+                                <th class="team-schedule__status">Status</th>
+                                <th class="team-schedule__time">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for fixture in fixtures %}
+                            <tr>
+                                <td class="team-schedule__date">{{ fixture.match_date | strftime('%e %B %Y') }}</td>
+                                <td class="team-schedule__versus">
+                                    <div class="team-meta">
+                                        <figure class="team-meta__logo">
+                                            <img src="assets/images/samples/logos/lucky_clovers_shield.png" alt="">
+                                        </figure>
+                                        <div class="team-meta__info">
+                                            <h6 class="team-meta__name">{{ fixture.match_team_away.name }}</h6>
+                                            <span class="team-meta__place">St. Patrick’s Institute</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="team-schedule__status">{{ fixture.match_team_home.name == 'ZANACO FC' ? 'Home' : 'Away'  }}</td>
+                                <td class="team-schedule__time">{{ fixture.match_date|date('H:i') }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Schedule & Tickets / End -->
+        <!-- Team Pagination -->
+        <nav class="team-pagination" aria-label="Team navigation">
+            <ul class="pagination pagination--condensed pagination--lg justify-content-center">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><span class="page-link">...</span></li>
+                <li class="page-item"><a class="page-link" href="#">16</a></li>
+            </ul>
+        </nav>
+        <!-- Team Pagination / End -->
+    </div>
+</div>

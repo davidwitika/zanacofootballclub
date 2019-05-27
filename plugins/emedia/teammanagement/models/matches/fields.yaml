@@ -1,0 +1,26 @@
+fields:
+    match_team_home:
+        label: 'Team Home'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    match_team_away:
+        label: 'Team Away'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    score_home:
+        label: 'Score Home'
+        span: auto
+        type: number
+    score_away:
+        label: 'Score Away'
+        span: auto
+        type: number
+    match_date:
+        label: 'Match Date'
+        mode: datetime
+        span: auto
+        type: datepicker

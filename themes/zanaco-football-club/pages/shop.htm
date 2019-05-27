@@ -1,0 +1,63 @@
+title = "Shop"
+url = "/shop"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+[ProductList]
+sorting = "no"
+==
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Products -->
+            <div class="col-md-9 order-md-2">
+                <!-- Shop List -->
+                <div class="card card--clean">
+                    <header class="card__header card__header--shop-filter">
+                        {% partial 'shop/shop-filter' %}
+                    </header>
+                </div>
+    
+                {% set obProductList = ProductList.make().sort(ProductList.getSorting()).active() %}
+                {% if obProductList.isNotEmpty() %}
+                <div class="card__content">
+                    <ul class="products products--grid products--grid-condensed products--grid-light">
+                        {% for obProduct in obProductList %}
+                        {% set obOffer = obProduct.offer.first() %}
+                        <li class="product__item card">
+                            <div class="product__img">
+                                {% if obProduct.preview_image is not empty %}
+                                <div class="product__img-holder">
+                                    <a href="{{ obProduct.getPageUrl() }}"> <img src="{{ obProduct.preview_image.path }}" title="{{ obProduct.preview_image.title }}" alt="{{ obProduct.preview_image.description }}"></a>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="product__content card__content">
+                                <header class="product__header">
+                                    <div class="product__header-inner">
+                                        <h2 class="product__title"><a href="{{ obProduct.getPageUrl() }}">{{ obProduct.name }}</a></h2>
+                                        <div class="product__price">
+                                            {{ obOffer.price }} {{ obOffer.currency }}
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            <!-- Products / End -->
+            <!-- Sidebar -->
+            <div class="sidebar sidebar--shop col-md-3 order-md-1">
+                {% partial 'widgets/widget-categories' %}
+                {% partial 'widgets/widget-filter-price' %}
+            </div>
+            <!-- Sidebar / End -->
+        </div>
+    </div>
+</div>

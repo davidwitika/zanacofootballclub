@@ -1,0 +1,65 @@
+<!-- Player Heading
+================================================== -->
+<div class="player-heading">
+	<div class="container">
+
+		<div class="player-info__title player-info__title--mobile">
+			<div class="player-info__number">{{ record.jersey_number }}</div>
+			<h1 class="player-info__name">
+				<span class="player-info__first-name">{{ record.first_name }}</span>
+				<span class="player-info__last-name">{{ record.last_name }}</span>
+			</h1>
+		</div>
+
+		<div class="player-info">
+
+			<!-- Player Photo -->
+			<div class="player-info__item player-info__item--photo">
+				<figure class="player-info__photo">
+					<img src="{{ record.profile_image|media }}" alt="">
+				</figure>
+			</div>
+			<!-- Player Photo / End -->
+
+			<!-- Player Details -->
+			<div class="player-info__item player-info__item--details">
+
+				<div class="player-info__title player-info__title--desktop">
+					<div class="player-info__number">{{ record.jersey_number }}</div>
+					<h1 class="player-info__name">
+						<span class="player-info__first-name">{{ record.first_name }}</span>
+						<span class="player-info__last-name">{{ record.last_name }}</span>
+					</h1>
+				</div>
+
+				<div class="player-info-details">
+					<div class="player-info-details__item player-info-details__item--height">
+						<h6 class="player-info-details__title">Height</h6>
+						<div class="player-info-details__value">{{ record.height }} m</div>
+					</div>
+					<div class="player-info-details__item player-info-details__item--weight">
+						<h6 class="player-info-details__title">Weight</h6>
+						<div class="player-info-details__value">{{ record.weight }} kg</div>
+					</div>
+					<div class="player-info-details__item player-info-details__item--age">
+						<h6 class="player-info-details__title">Age</h6>
+						<div class="player-info-details__value">{{ record.date_of_birth.age }}</div>
+					</div>
+					<div class="player-info-details__item player-info-details__item--born">
+						<h6 class="player-info-details__title">Home Town</h6>
+						<div class="player-info-details__value">{{ record.home_town}}</div>
+					</div>
+					<div class="player-info-details__item player-info-details__item--position">
+						<h6 class="player-info-details__title">Position</h6>
+						<div class="player-info-details__value">{{ record.position.name }}</div>
+					</div>
+					<div class="player-info-details__item player-info-details__item--foot">
+						<h6 class="player-info-details__title">Foot</h6>
+						<div class="player-info-details__value">{{ record.foot }}</div>
+					</div>
+				</div>
+			</div>
+			<!-- Player Details / End -->
+		</div>
+	</div>
+</div>

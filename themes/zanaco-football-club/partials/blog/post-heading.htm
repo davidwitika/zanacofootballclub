@@ -1,0 +1,29 @@
+<!-- Page Heading
+================================================== -->
+{% set image = post.featured_images.first %}
+<div class="page-heading page-heading--overlay page-heading--post-bg" style="background-image:url('{{ image.path }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- Post Meta - Top -->
+                <div class="post__meta-block post__meta-block--top">
+                    <!-- Post Category -->
+                    {% for category in post.categories %}
+                    <span class="label posts__cat-label">{{ category.name }}</span>
+                    {% endfor %}
+                    <!-- Post Category / End -->
+                    <!-- Post Title -->
+                    <h1 class="page-heading__title">{{ post.title }}</h1>
+                    <!-- Post Title / End -->
+                    <!-- Post Meta Info -->
+                    <ul class="post__meta meta">
+                        <li class="meta__item meta__item--date"><time datetime="{{ post.published_at|date('Y-m-d') }}">{{ next.published_at | strftime('%e %B %Y') }}</time></li>
+                        <li class="meta__item meta__item--comments"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></li>
+                    </ul>
+                    <!-- Post Meta Info / End -->
+                </div>
+                <!-- Post Meta - Top / End -->
+            </div>
+        </div>
+    </div>
+</div>

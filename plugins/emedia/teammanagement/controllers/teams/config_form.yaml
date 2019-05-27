@@ -1,0 +1,10 @@
+name: Teams
+form: $/emedia/teammanagement/models/teams/fields.yaml
+modelClass: emedia\TeamManagement\Models\Teams
+defaultRedirect: emedia/teammanagement/teams
+create:
+    redirect: 'emedia/teammanagement/teams/update/:id'
+    redirectClose: emedia/teammanagement/teams
+update:
+    redirect: emedia/teammanagement/teams
+    redirectClose: emedia/teammanagement/teams

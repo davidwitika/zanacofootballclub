@@ -1,0 +1,21 @@
+[viewBag]
+
+[breadcrumbs]
+main-ol-class = "page-heading__breadcrumb breadcrumb"
+main-li-class = "breadcrumb-item"
+active-class = "active"
+disabled-class = "disabled"
+==
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<h1 class="page-heading__title">{{ this.page.title}}</h1>
+				{% component 'breadcrumbs' %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Page Heading / End -->

@@ -1,0 +1,12 @@
+
+<ul class="posts posts--simple-list posts--simple-list--search">
+{% for result in results %}
+{# Display all results #}
+{% partial __SELF__ ~ '::searchresult.htm' result = result %}
+{% else %}
+{# No results found #}
+{% partial __SELF__ ~ '::no-results.htm' %}
+{% endfor %}
+</ul>
+
+{% partial __SELF__ ~ '::pagination.htm' results = results %}

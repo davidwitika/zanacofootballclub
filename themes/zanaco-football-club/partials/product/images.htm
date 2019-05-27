@@ -1,0 +1,27 @@
+<div class="product__img">
+    <div class="product__img-holder">
+        <!-- Product Slider - Soccer -->
+        <div class="product__slider-soccer-wrapper">
+            {% if images %}
+            <div class="product__slider-thumbs">
+                {% for image in images %}
+                <div class="product__slide-thumb">
+                    <div class="product__slide-thumb-holder">
+                        <img src="{{ image.getThumb(60, 60) }}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="product__slider-soccer">
+                {% for image in images %}
+                <div class="product__slide">
+                    <img src="{{ image.getThumb(278, 312) }}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Product Slider / End -->
+            {% endif %}
+        </div>
+        <!-- Product Slider - Soccer / End -->
+    </div>
+</div>

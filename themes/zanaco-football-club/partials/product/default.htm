@@ -1,0 +1,22 @@
+<div class="product__item card">
+    {% set images = obProduct.images %}
+    {% set obOffer = obProduct.offer.first() %}
+    {% partial 'product/images' images=images %}
+    <div class="product__content card__content">
+        <header class="product__header">
+            <div class="product__header-inner">
+                <span class="product__category">{{ obProduct.category.name }}</span>
+                <h2 class="product__title">{{ obProduct.name }}</h2>
+            </div>
+            <div class="product__price">
+                {% partial 'product/price' obOffer=obOffer %}
+            </div>
+        </header>
+        <div class="product__excerpt product__excerpt--sm">
+            <h6>Description</h6>
+            {% if obProduct.preview_text %}
+                {{ obProduct.preview_text }}
+            {% endif %}
+        </div>
+    </div>
+</div>

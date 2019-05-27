@@ -1,0 +1,4 @@
+title: Matches
+modelClass: emedia\TeamManagement\Models\Matches
+toolbar:
+    buttons: reorder_toolbar

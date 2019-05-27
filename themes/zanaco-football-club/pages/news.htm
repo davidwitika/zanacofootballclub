@@ -1,0 +1,107 @@
+title = "News"
+url = "/news/:page?"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 9
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "bk"
+postPage = "post"
+
+[breadcrumbs]
+main-ol-class = "page-heading__breadcrumb breadcrumb"
+main-li-class = "breadcrumb-item"
+active-class = "active"
+disabled-class = "disabled"
+
+[siteSearchInclude]
+==
+<!-- Content
+================================================== -->
+{% set posts = blogPosts.posts %}
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+            <div class="content col-md-12">
+                <!-- Posts Grid -->
+                <div class="posts posts--cards post-grid post-grid--masonry row">
+                    {% for post in posts %}
+                    {% set image = post.featured_images.first %}
+                    <div class="post-grid__item col-md-6 col-lg-4">
+                        <div class="posts__item posts__item--card posts__item card">
+                            {% if image %}
+                            <figure class="posts__thumb">
+                                <div class="posts__cat">
+                                    {% for category in post.categories %}
+                                    <span class="label posts__cat-label">{{ category.name }}</span>
+                                    {% endfor %}
+                                </div>
+                                <a href="{{ post.url }}"><img src="{{ image.getThumb(378, '270', 'crop') }}" alt=""></a>
+                            </figure>
+                            {% endif %}
+                            <div class="posts__inner card__content">
+                                <div class="posts__cat posts__cat--flow">
+                                    {% for category in post.categories %}
+                                    <span class="label posts__cat-label">{{ category.name }}</span>
+                                    {% endfor %}
+                                </div>
+                                <time datetime="{{ post.published_at|date('Y-m-d')}}" class="posts__date">{{ post.published_at | strftime('%e %B %Y') }}</time>
+                                <h6 class="posts__title"><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                            </div>
+                            <footer class="posts__footer card__footer">
+                                <ul class="post__meta meta">
+                                    <li class="meta__item meta__item--comments"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </div>
+                    {% if loop.index == 2 %}
+                    <div class="post-grid__item col-md-6 col-lg-4">
+                        <a href="#" class="btn-social-counter btn-social-counter--card btn-social-counter--fb">
+                            <div class="btn-social-counter__logo"><img src="{{ 'assets/images/social-logo-facebook.png'|theme	}}" alt="Facebook"></div>
+                            <footer class="btn-social-counter__footer">
+                                <h6 class="btn-social-counter__title">Like Our Facebook Page</h6>
+                                <span class="btn-social-counter__count">83600 Likes</span>
+                                <span class="btn-social-counter__add-icon"></span>
+                            </footer>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <!-- Post Grid / End -->
+                {% if posts.lastPage > 1 %}
+                <!-- Post Pagination -->
+                <nav class="post-pagination" aria-label="Blog navigation">
+                    <ul class="pagination pagination--condensed pagination--lg justify-content-center">
+                        {% if posts.currentPage > 1 %}
+                        <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a></li>
+                        {% endif %}
+                        {% for page in 1..posts.lastPage %}
+                        <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+                            <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                        </li>
+                        {% endfor %}
+                        {% if posts.lastPage > posts.currentPage %}
+                        <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a></li>
+                        {% endif %}
+                </nav>
+                <!-- Post Pagination / End -->
+                {% endif %}
+            </div>
+            <!-- Content / End -->
+        </div>
+    </div>
+</div>
+<!-- Content / End -->
+{% put scripts %}
+<script id="dsq-count-scr" src="//zanacofc.disqus.com/count.js" async></script>
+{% endput %}

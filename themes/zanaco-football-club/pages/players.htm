@@ -1,0 +1,77 @@
+title = "Players"
+url = "/my-zanaco/players"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[builderList playerList]
+modelClass = "emedia\TeamManagement\Models\Players"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "slug"
+noRecordsMessage = "No records found"
+detailsPage = "player"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+sortColumn = "jersey_number"
+==
+{% set players = playerList.records %}
+<div class="site-content">
+    <div class="container">
+        <!-- Team Roster - Card Compact -->
+        {% if players %}
+        <div class="team-roster team-roster--card-compact js-team-roster--card-compact row">
+            {% for player in players %}
+            <div class="col-md-4">
+                <!-- Player Card #{{key}} -->
+                <div class="team-roster__item card">
+                    <div class="card__content">
+                        <div class="team-roster__content-wrapper">
+                            <!-- Player Photo -->
+                            <figure class="team-roster__player-img">
+                                <img src="{{ player.profile_image|media }}" alt="">
+                            </figure>
+                            <!-- Player Photo / End-->
+                            <!-- Player Name -->
+                            <div class="team-roster__player-info">
+                                <h3 class="team-roster__player-name">
+                                    <span class="team-roster__player-first-name">{{ player.first_name }}</span>
+                                    <span class="team-roster__player-last-name">{{ player.last_name }}</span>
+                                </h3>
+                            </div>
+                            <!-- Player Name / End -->
+                            <!-- Player Details -->
+                            <div class="team-roster__player-details card">
+                                <!-- Player Details Body -->
+                                <div class="team-roster__player-details-body">
+                                    <div class="team-roster__player-details-excerpt">
+                                        {{ excerpt_sm }}
+                                    </div>
+                                    <footer class="team-roster__player-details-footer">
+                                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(player, detailsKeyColumn) }) }}" class="btn btn-sm btn-block btn-primary-inverse">
+                                            Read Full Bio
+                                        </a>
+                                        <a href="{{ player.facebook }}" class="btn btn-sm btn-single-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                                        <a href="{{ player.twitter }}" class="btn btn-sm btn-single-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                                    </footer>
+                                </div>
+                          
+                            </div>
+                            <!-- Player Details / End -->
+                            <!-- Player Squad Number -->
+                            <div class="team-roster__player-number">{{ player.jersey_number }}</div>
+                            <!-- Player Squad Number / End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Player Card #{{key}} / End -->
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>

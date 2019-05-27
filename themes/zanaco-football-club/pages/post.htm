@@ -1,0 +1,69 @@
+title = "Post"
+url = "/news/article/:slug"
+layout = "master"
+is_hidden = 0
+child_of = "news"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "bk"
+==
+<?php
+function onEnd()
+{
+    $this->page->post_heading = true;
+    $_post= $this->components['blogPost']; 
+    $_post = $_post->post; // post is the alias of my component
+    $_title = $_post->title;
+    $this->page->title = $_title;
+
+}
+?>
+==
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+
+
+            <div class="content col-md-8 offset-md-2">
+                <!-- Article -->
+                <article class="card card--lg post post--single post--extra-top">
+                    <div class="card__content">
+                        <div class="post__content">
+                            {{ post.content_html|raw }}
+                        </div>
+                    </div>
+                </article>
+                <!-- Article / End -->
+                {% partial 'single-post/post-sharing' %}
+                {% partial 'single-post/post-related' %}
+
+                <div id="disqus_thread"></div>
+            </div>
+            <!-- Content / End -->
+        </div>
+    </div>
+</div>
+{% put scripts %}
+<script id="dsq-count-scr" src="//zanacofc.disqus.com/count.js" async></script>
+<script>
+var disqus_config = function() {
+    this.page.url = "{{ ''| page }}";
+    this.page.identifier = "{{ post.id }}";
+
+};
+
+(function() {
+    var d = document,
+        s = d.createElement('script');
+    s.src = 'https://zanacofc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endput %}

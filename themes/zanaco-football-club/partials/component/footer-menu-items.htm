@@ -1,0 +1,11 @@
+[viewBag]
+==
+<ul class="footer-nav footer-nav--right footer-nav--condensed footer-nav--sm">
+    {% for item in items %}
+    <li class="footer-nav__item">
+        <a href="{{ item.url }}">
+            {{ item.title }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>

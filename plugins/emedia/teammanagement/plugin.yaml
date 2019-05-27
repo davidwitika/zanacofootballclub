@@ -1,0 +1,28 @@
+plugin:
+    name: 'emedia.teammanagement::lang.plugin.name'
+    description: 'Soccer team management plugin'
+    author: eMedia
+    icon: oc-icon-soccer-ball-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Team
+        url: emedia/teammanagement/positions
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: Teams
+                url: emedia/teammanagement/teams
+                icon: icon-tag
+            side-menu-item2:
+                label: Positions
+                url: emedia/teammanagement/positions
+                icon: icon-sort-numeric-asc
+            side-menu-item3:
+                label: Players
+                url: emedia/teammanagement/players
+                icon: icon-user
+            side-menu-item4:
+                label: Matches
+                url: emedia/teammanagement/matches
+                icon: icon-calendar

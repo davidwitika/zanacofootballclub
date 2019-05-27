@@ -1,0 +1,36 @@
+title = "Search"
+url = "/search"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+            {% set results = searchResults.results %}
+            {% set query = searchResults.query %}
+            <div class="content col-md-8">
+                <div class="alert alert-success">
+                    <strong>{{ results.count}} Articles were found for your "<span class="text-success">{{ query }}</span>" search</strong>
+                </div>
+                {% partial 'searchresults/default' results=results %}
+            </div>
+            <!-- Content / End -->
+            <!-- Sidebar -->
+            <div id="sidebar" class="sidebar col-md-4">
+             	{% partial 'widgets/widget-social' %}
+            </div>
+            <!-- Sidebar / End -->
+        </div>
+    </div>
+</div>

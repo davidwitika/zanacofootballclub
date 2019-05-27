@@ -1,0 +1,20 @@
+<li class="posts__item card posts__item">
+    <div class="posts__inner card__content">
+		{% if result.categories.count %}	
+		hi
+			<!-- Post Category -->
+				{% for category in result.categories %}                        	
+					<span class="label posts__cat-label">{{ category.name }}</span>
+				{% endfor %}
+				
+		{% endif %}	
+        <h6 class="posts__title"><a href="{{ result.url | app }}">{{ result.title | raw }}</a></h6>
+        {% if result.published_at %}
+        <time datetime="{{ result.published_at|date('Y-m-d') }}" class="posts__date">
+        {{  result.published_at|date('M d, Y') }}</time>
+        {% endif %}
+        <div class="posts__excerpt">
+            {{ result.excerpt | raw }}
+        </div>
+    </div>
+</li>

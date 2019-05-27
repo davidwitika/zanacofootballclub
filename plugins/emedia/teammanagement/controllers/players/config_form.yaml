@@ -1,0 +1,10 @@
+name: Players
+form: $/emedia/teammanagement/models/players/fields.yaml
+modelClass: emedia\TeamManagement\Models\Players
+defaultRedirect: emedia/teammanagement/players
+create:
+    redirect: 'emedia/teammanagement/players/update/:id'
+    redirectClose: emedia/teammanagement/players
+update:
+    redirect: emedia/teammanagement/players
+    redirectClose: emedia/teammanagement/players

@@ -1,0 +1,77 @@
+name: 'Primary Navigation'
+items:
+    -
+        title: Home
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: home
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: News
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: news
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'My Zanaco'
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Players
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: players
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Fixtures
+                type: cms-page
+                code: ''
+                reference: fixtures
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Shop
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: shop
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

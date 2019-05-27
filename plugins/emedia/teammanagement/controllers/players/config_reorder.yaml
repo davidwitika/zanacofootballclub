@@ -1,0 +1,4 @@
+title: Players
+modelClass: emedia\TeamManagement\Models\Players
+toolbar:
+    buttons: reorder_toolbar

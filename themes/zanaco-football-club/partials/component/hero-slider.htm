@@ -1,0 +1,93 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "bk"
+postPage = "post"
+
+[viewBag]
+==
+<!-- Hero Slider
+================================================== -->
+
+<div class="hero-slider-wrapper">
+
+	<div class="hero-slider">
+		{% set posts = blogPosts.posts %}
+
+		{% for post in posts %}
+			{% set image = post.featured_images.first %}
+			<div class="hero-slider__item hero-slider__item" style="background-image:url('{{ image.path }}')">
+				<div class="container hero-slider__item-container">
+					<div class="row">
+						<div class="col-md-8 offset-md-2">
+							<!-- Post Meta - Top -->
+							<div class="post__meta-block post__meta-block--top">
+								{% if post.categories.count %}	
+									<!-- Post Category -->
+									<div class="post__category">
+										{% for category in post.categories %}                        	
+                        					<span class="label posts__cat-label">{{ category.name }}</span>
+                    					{% endfor %}
+										
+									</div>
+								{% endif %}	
+								<!-- Post Category / End -->
+
+								<!-- Post Title -->
+								<h1 class="page-heading__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+								<!-- Post Title / End -->
+
+								<!-- Post Meta Info -->
+								<ul class="post__meta meta">
+									<li class="meta__item meta__item--date"><time datetime="post.published_at|date('Y-m-d')">{{ post.published_at | strftime('%e %B %Y') }}</time></li>
+						
+									<li class="meta__item meta__item--comments"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></li>
+								</ul>
+								<!-- Post Meta Info / End -->
+							</div>
+							<!-- Post Meta - Top / End -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		 {% endfor %}
+      
+
+	</div>
+
+	<div class="hero-slider-thumbs-wrapper">
+		<div class="container">
+			<div class="hero-slider-thumbs posts posts--simple-list">
+
+				{% for post in posts %}
+				<div class="hero-slider-thumbs__item">
+					<div class="posts__item posts__item--">
+						<div class="posts__inner">
+							{% if post.categories.count %}	
+								<!-- Post Category -->
+								<div class="posts__cat">
+									{% for category in post.categories %}
+										<span class="label posts__cat-label">{{ category.name }}</span>
+									{% endfor %}
+								</div>
+							{% endif %}	
+	
+
+							<h6 class="posts__title">{{ post.title }}</h6>
+							<time datetime="{{ post.published_at('Y-m-d') }}" class="posts__date">{{ post.published_at | strftime('%e %B %Y') }}</time>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</div>
+
+{% put scripts %}
+<script id="dsq-count-scr" src="//zanacofc.disqus.com/count.js" async></script>
+{% endput %}

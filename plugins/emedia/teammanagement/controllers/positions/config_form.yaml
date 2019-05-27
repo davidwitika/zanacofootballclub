@@ -1,0 +1,10 @@
+name: Positions
+form: $/emedia/teammanagement/models/positions/fields.yaml
+modelClass: emedia\TeamManagement\Models\Positions
+defaultRedirect: emedia/teammanagement/positions
+create:
+    redirect: 'emedia/teammanagement/positions/update/:id'
+    redirectClose: emedia/teammanagement/positions
+update:
+    redirect: emedia/teammanagement/positions
+    redirectClose: emedia/teammanagement/positions

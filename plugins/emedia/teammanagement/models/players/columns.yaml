@@ -1,0 +1,10 @@
+columns:
+    jersey_number:
+        label: 'Jersey Number'
+        type: number
+    first_name:
+        label: 'First Name'
+        type: text
+    last_name:
+        label: 'Last Name'
+        type: text

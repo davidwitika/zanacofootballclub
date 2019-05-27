@@ -1,0 +1,71 @@
+==
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>{{ this.page.title }} | ZANACO Football Club</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="ZANACO">
+    <meta name="title" content="{{ this.page.meta_title }}">
+
+	<meta name="keywords" content="zanaco football club">
+
+	<!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon/favicon.ico'|theme }}">
+    <link rel="icon" type="image/png" href="{{ 'assets/favicon/favicon/favicon-32x32.png'|theme }}" sizes="32x32" />
+	<link rel="icon" type="image/png" href="{{ 'assets/favicon/favicon/favicon-16x16.png'|theme }}" sizes="16x16" />
+
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
+	<!-- Google Web Fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Vendor CSS -->
+	<link href="{{ 'assets/vendor/bootstrap/css/bootstrap.css'|theme }}" rel="stylesheet">
+	<link href="{{ 'assets/fonts/font-awesome/css/font-awesome.min.css'|theme }}" rel="stylesheet">
+	<link href="{{ 'assets/fonts/simple-line-icons/css/simple-line-icons.css'|theme }}" rel="stylesheet">
+	<link href="{{ 'assets/vendor/magnific-popup/dist/magnific-popup.css'|theme }}" rel="stylesheet">
+	<link href="{{ 'assets/vendor/slick/slick.css'|theme }}" rel="stylesheet">
+
+    <link href="{{ 'assets/dist/css/styles.css'|theme }}" rel="stylesheet">
+    
+</head>
+<body class="template-soccer page-loader-disable">
+
+	<div class="site-wrapper clearfix">
+		<div class="site-overlay"></div>
+
+		{% partial 'component/header' %}
+
+		{% if this.page.hero_unit_slider %}
+			{% partial 'component/hero-slider' %}
+		{% elseif this.page.player_heading %}
+			{% partial 'player/player-heading' %}
+		{% elseif this.page.post_heading %}
+			{% partial 'blog/post-heading' %}
+		{% else %}
+			{% partial 'component/page-heading' %}
+		{% endif %}
+
+
+		{% page %}
+
+	
+		{% partial 'component/footer' %}
+	</div>
+	{% partial 'component/footer-scripts' %}
+</body>
+</html>
