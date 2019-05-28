@@ -55,9 +55,35 @@ items:
                     isExternal: '0'
             -
                 title: Fixtures
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: ''
                 reference: fixtures
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Board Members'
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: board-members
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Technical staff'
+                type: cms-page
+                code: ''
+                reference: technical-staff
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -71,6 +97,15 @@ items:
         reference: shop
         cmsPage: ''
         replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Who we are'
+        type: cms-page
+        code: ''
+        reference: who-we-are
         viewBag:
             isHidden: '0'
             cssClass: ''
