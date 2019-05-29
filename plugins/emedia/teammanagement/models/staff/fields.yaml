@@ -1,0 +1,29 @@
+fields:
+    first_name:
+        label: 'First Name'
+        span: auto
+        type: text
+    last_name:
+        label: 'Last Name'
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: full
+        type: text
+    position:
+        label: Position
+        nameFrom: name
+        descriptionFrom: description
+        span: full
+        type: relation
+    bio:
+        label: Bio
+        span: full
+        size: ''
+        type: richeditor
+    excerpt:
+        label: Excerpt
+        size: ''
+        span: full
+        type: textarea

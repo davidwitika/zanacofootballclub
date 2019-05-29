@@ -1,0 +1,4 @@
+title: Staff
+modelClass: emedia\TeamManagement\Models\Staff
+toolbar:
+    buttons: reorder_toolbar

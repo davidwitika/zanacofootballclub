@@ -1,0 +1,7 @@
+columns:
+    first_name:
+        label: first_name
+        type: text
+    last_name:
+        label: last_name
+        type: text

@@ -48,3 +48,18 @@
 1.0.17:
     - 'Updated table emedia_teammanagement_matches'
     - builder_table_update_emedia_teammanagement_matches_3.php
+1.0.18:
+    - 'Created table emedia_teammanagement_staff'
+    - builder_table_create_emedia_teammanagement_staff.php
+1.0.19:
+    - 'Updated table emedia_teammanagement_staff'
+    - builder_table_update_emedia_teammanagement_staff.php
+1.0.20:
+    - 'Created table emedia_teammanagement_staff_positions'
+    - builder_table_create_emedia_teammanagement_staff_positions.php
+1.0.21:
+    - 'Updated table emedia_teammanagement_staff'
+    - builder_table_update_emedia_teammanagement_staff_2.php
+1.0.22:
+    - 'Updated table emedia_teammanagement_staff'
+    - builder_table_update_emedia_teammanagement_staff_3.php
