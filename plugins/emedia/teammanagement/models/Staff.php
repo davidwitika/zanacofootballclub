@@ -1,6 +1,7 @@
 <?php namespace emedia\TeamManagement\Models;
 
 use Model;
+use Str;
 
 /**
  * Model
@@ -28,21 +29,12 @@ class Staff extends Model
     ];
 
      public $belongsTo = [
-        'position' => [
-            'emedia\TeamManagement\Models\StaffPositions'
-        ]
+         'position' => [
+            'emedia\TeamManagement\Models\StaffPositions', 
+            'key' => 'staff_position_id',
+            'otherkey' => 'id'
+        ],
     ];
 
-    public function beforeSave()
-    {
-        // Autogenerate name
-        if (empty($this->name)) {
-            $this->name = $this->first_name . ' ' . $this->model . ' ' . $this->variant;
-        }
 
-        // Force creation of slug
-        if (empty($this->slug)) {
-            unset($this->slug);
-            $this->setSluggedValue('slug', 'name');
-        }
 }

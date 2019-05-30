@@ -7,9 +7,16 @@ fields:
         label: 'Last Name'
         span: auto
         type: text
+    name:
+        label: 'Full Name'
+        span: auto
+        type: text
     slug:
         label: Slug
-        span: full
+        span: auto
+        preset:
+            field: name
+            type: slug
         type: text
     position:
         label: Position
