@@ -81,3 +81,9 @@
 1.0.28:
     - 'Updated table emedia_teammanagement_staff'
     - builder_table_update_emedia_teammanagement_staff_9.php
+1.0.29:
+    - 'Drop table emedia_teammanagement_staff_positions'
+    - builder_table_delete_emedia_teammanagement_staff_positions.php
+1.0.30:
+    - 'Updated table emedia_teammanagement_staff'
+    - builder_table_update_emedia_teammanagement_staff_10.php

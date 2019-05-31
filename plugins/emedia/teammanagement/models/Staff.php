@@ -31,13 +31,6 @@ class Staff extends Model
     public $rules = [
     ];
 
-     public $belongsTo = [
-         'position' => [
-            'emedia\TeamManagement\Models\StaffPositions', 
-            'key' => 'staff_position_id',
-            'otherkey' => 'id'
-        ],
-    ];
 
 
 }

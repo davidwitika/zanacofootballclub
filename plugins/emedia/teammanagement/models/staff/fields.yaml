@@ -20,10 +20,8 @@ fields:
         type: text
     position:
         label: Position
-        nameFrom: name
-        descriptionFrom: description
         span: full
-        type: relation
+        type: text
     bio:
         label: Bio
         span: full

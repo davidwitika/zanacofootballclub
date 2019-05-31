@@ -1,4 +1,0 @@
-title: StaffPositions
-modelClass: emedia\TeamManagement\Models\StaffPositions
-toolbar:
-    buttons: reorder_toolbar
