@@ -1,0 +1,53 @@
+title = "Staff Member"
+url = "/my-zanaco/technical-staff/:slug"
+layout = "master"
+is_hidden = 0
+child_of = "technical-staff"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[builderDetails staffMember]
+modelClass = "emedia\TeamManagement\Models\Staff"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<?php
+function onEnd()
+{
+    $this->page->staff_member_heading = true;
+    $_staffMember= $this->components['staffMember']; 
+    $_staffMember = $_staffMember->record; 
+    $_title = $_staffMember->name;
+    $this->page->title = $_title;
+}
+?>
+==
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+            <div class="content col-md-8">
+                <!-- Article -->
+                <article class="card card--lg post post--single">
+                    <div class="card__content">
+                        <header class="post__header">
+                            <h2 class="post__title">{{ record.first_name }} {{ record.last_name }} Biography</h2>
+                        </header>
+                        <div class="post__content">
+                            {{ record.bio|raw }}
+                        </div>
+                    </div>
+                </article>
+                <!-- Article / End -->
+            </div>
+            <!-- Content / End -->
+            <!-- Player Sidebar -->
+            <div class="sidebar sidebar--player col-md-4">
+            </div>
+            <!-- Player Sidebar / End -->
+        </div>
+    </div>
+</div>

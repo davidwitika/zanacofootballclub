@@ -16864,6 +16864,9 @@ td.team-leader__goals {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.team-roster--card-compact .team-roster__item .team-roster__player-staff-position {
+  font-size: 12px;
+}
 .team-roster--card-compact .team-roster__item .team-roster__player-last-name {
   display: block;
   font-size: 22px;
@@ -17691,7 +17694,14 @@ td.team-leader__goals {
 }
 
 .player-info__last-name {
+  display: block;
   color: #f0ad4e;
+}
+
+.player-info__staff-position {
+  font-size: 48px;
+  line-height: 1em;
+  display: block;
 }
 
 .player-info-details {
