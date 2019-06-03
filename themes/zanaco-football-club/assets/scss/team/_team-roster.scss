@@ -298,6 +298,7 @@
 								white-space: nowrap;
 							}
 
+
 					// subheader
 					.team-roster__member-subheader {
 						padding-top: 3px;
@@ -1068,6 +1069,10 @@
 									overflow: hidden;
 									text-overflow: ellipsis;
 									white-space: nowrap;
+								}
+
+								.team-roster__player-staff-position {
+									font-size: 12px;
 								}
 								.team-roster__player-last-name {
 									display: block;

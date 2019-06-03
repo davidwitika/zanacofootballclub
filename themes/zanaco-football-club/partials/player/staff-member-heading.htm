@@ -1,0 +1,32 @@
+<div class="player-heading">
+	<div class="container">
+		<div class="player-info__title player-info__title--mobile">
+			<h1 class="player-info__name">
+				<span class="player-info__first-name">{{ record.first_name }}</span>
+				<span class="player-info__last-name">{{ record.last_name }}</span>
+				<span class="player-info">{{ record.position }}</span>
+			</h1>
+		</div>
+		<div class="player-info">
+			<!-- Player Photo -->
+			<div class="player-info__item player-info__item--photo">
+				<figure class="player-info__photo">
+					<img src="{{ record.profile_image|media }}" alt="">
+				</figure>
+			</div>
+			<!-- Player Photo / End -->
+			<!-- Player Details -->
+			<div class="player-info__item player-info__item--details">
+
+				<div class="player-info__title player-info__title--desktop">
+					<h1 class="player-info__name">
+						<span class="player-info__first-name">{{ record.first_name }}</span>
+						<span class="player-info__last-name">{{ record.last_name }}</span>
+						<span class="player-info__staff-position">{{ record.position }}</span>
+					</h1>
+				</div>
+			</div>
+			<!-- Player Details / End -->
+		</div>
+	</div>
+</div>

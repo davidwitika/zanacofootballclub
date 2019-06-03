@@ -1,0 +1,10 @@
+name: Staff
+form: $/emedia/teammanagement/models/staff/fields.yaml
+modelClass: emedia\TeamManagement\Models\Staff
+defaultRedirect: emedia/teammanagement/staff
+create:
+    redirect: 'emedia/teammanagement/staff/update/:id'
+    redirectClose: emedia/teammanagement/staff
+update:
+    redirect: emedia/teammanagement/staff
+    redirectClose: emedia/teammanagement/staff

@@ -1,0 +1,10 @@
+columns:
+    first_name:
+        label: 'First Name'
+        type: text
+    last_name:
+        label: 'Last Name'
+        type: text
+    sort_order:
+        label: 'Sort Order'
+        type: number

@@ -54,6 +54,8 @@
 			{% partial 'component/hero-slider' %}
 		{% elseif this.page.player_heading %}
 			{% partial 'player/player-heading' %}
+		{% elseif this.page.staff_member_heading %}
+			{% partial 'player/staff-member-heading' %}	
 		{% elseif this.page.post_heading %}
 			{% partial 'blog/post-heading' %}
 		{% else %}

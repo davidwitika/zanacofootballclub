@@ -1,0 +1,39 @@
+fields:
+    first_name:
+        label: 'First Name'
+        span: auto
+        type: text
+    last_name:
+        label: 'Last Name'
+        span: auto
+        type: text
+    name:
+        label: 'Full Name'
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    profile_image:
+        label: 'Profile Image'
+        span: full
+        mode: file
+        type: mediafinder
+    position:
+        label: Position
+        span: full
+        type: text
+    bio:
+        label: Bio
+        span: full
+        size: ''
+        type: richeditor
+    excerpt:
+        label: Excerpt
+        size: ''
+        span: full
+        type: textarea

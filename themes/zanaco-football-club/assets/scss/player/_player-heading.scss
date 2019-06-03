@@ -208,7 +208,13 @@
             }
           }
           .player-info__last-name {
+            display: block;
             color: $player-page-heading-second-name;
+          }
+          .player-info__staff-position {
+            font-size: 48px;
+            line-height: 1em;
+            display: block;
           }
 
       .player-info-details {

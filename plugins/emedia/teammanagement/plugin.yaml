@@ -26,3 +26,7 @@ navigation:
                 label: Matches
                 url: emedia/teammanagement/matches
                 icon: icon-calendar
+            staff:
+                label: Staff
+                url: emedia/teammanagement/staff
+                icon: icon-briefcase
