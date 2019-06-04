@@ -87,3 +87,12 @@
 1.0.30:
     - 'Updated table emedia_teammanagement_staff'
     - builder_table_update_emedia_teammanagement_staff_10.php
+1.0.31:
+    - 'Created table emedia_teammanagement_stadiums'
+    - builder_table_create_emedia_teammanagement_stadiums.php
+1.0.32:
+    - 'Updated table emedia_teammanagement_matches'
+    - builder_table_update_emedia_teammanagement_matches_4.php
+1.0.33:
+    - 'Updated table emedia_teammanagement_stadiums'
+    - builder_table_update_emedia_teammanagement_stadiums.php

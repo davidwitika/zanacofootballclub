@@ -1,0 +1,10 @@
+name: Stadiums
+form: $/emedia/teammanagement/models/stadiums/fields.yaml
+modelClass: emedia\TeamManagement\Models\Stadiums
+defaultRedirect: emedia/teammanagement/stadiums
+create:
+    redirect: 'emedia/teammanagement/stadiums/update/:id'
+    redirectClose: emedia/teammanagement/stadiums
+update:
+    redirect: emedia/teammanagement/stadiums
+    redirectClose: emedia/teammanagement/stadiums

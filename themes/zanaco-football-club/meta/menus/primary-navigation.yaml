@@ -81,9 +81,22 @@ items:
                     isExternal: '0'
             -
                 title: 'Technical staff'
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: ''
                 reference: technical-staff
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Latest Results'
+                type: cms-page
+                code: ''
+                reference: latest-results
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -103,9 +116,13 @@ items:
             isExternal: '0'
     -
         title: 'Who we are'
+        nesting: ''
         type: cms-page
+        url: ''
         code: ''
         reference: who-we-are
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

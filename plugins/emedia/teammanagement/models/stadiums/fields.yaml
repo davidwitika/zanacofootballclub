@@ -1,0 +1,5 @@
+fields:
+    name:
+        label: 'Stadium Name'
+        span: left
+        type: text

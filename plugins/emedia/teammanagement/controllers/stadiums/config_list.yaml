@@ -1,0 +1,12 @@
+list: $/emedia/teammanagement/models/stadiums/columns.yaml
+modelClass: emedia\TeamManagement\Models\Stadiums
+title: Stadiums
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'emedia/teammanagement/stadiums/update/:id'

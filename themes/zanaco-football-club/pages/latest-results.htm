@@ -1,0 +1,78 @@
+title = "Latest Results"
+url = "/latest-results"
+layout = "master"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+[builderList latestResults]
+modelClass = "emedia\TeamManagement\Models\Matches"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+[siteSearchInclude]
+==
+<div class="site-content">
+    <div class="container">
+        <!-- Team Latest Results -->
+        <div class="card card--has-table">
+            <div class="card__header card__header--has-btn">
+                <h4>Latest Results</h4>
+            </div>
+            <div class="card__content">
+                <div class="table-responsive">
+                    <table class="table table-hover team-result">
+                        <thead>
+                            <tr>
+                                <th class="team-result__date">Date</th>
+                                <th class="team-result__vs">Home</th>
+                                <th class="team-result__vs">Away</th>
+                                <th class="team-result__score">Score</th>
+                                <th class="team-result">Venue</th>
+                                
+                                <th class="team-result__game-overview">Game Overview</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for result in latestResults.records %}
+                            <tr>
+                                <td class="team-result__date">{{ result.match_date | strftime('%e %B %Y') }}</td>
+                                <td class="team-result__vs">
+                                    <div class="team-meta">
+                                        <figure class="team-meta__logo">
+                                            <img src="{{ result.match_team_home.logo|media }}" alt="">
+                                        </figure>
+                                        <div class="team-meta__info">
+                                            <h6 class="team-meta__name">{{ result.match_team_home.name }}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="team-result__vs">
+                                    <div class="team-meta">
+                                        <figure class="team-meta__logo">
+                                            <img src="{{ result.match_team_away.logo|media }}" alt="">
+                                        </figure>
+                                        <div class="team-meta__info">
+                                            <h6 class="team-meta__name">{{ result.match_team_away.name }}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="team-result__score"><span class="team-result__game">{{ result.score }}</td>
+                                <td class="team-result">{{ result.stadium.name }}</td>
+                                <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Team Latest Results / End -->
+    </div>
+</div>

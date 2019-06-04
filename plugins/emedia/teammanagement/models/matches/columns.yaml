@@ -1,7 +1,10 @@
 columns:
+    id:
+        label: ID
+        type: number
     score_home:
         label: 'Score Home'
-        type: number
+        type: text
     score_away:
         label: 'Score Away'
-        type: number
+        type: text

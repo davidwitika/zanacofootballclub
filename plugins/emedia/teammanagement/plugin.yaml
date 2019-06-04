@@ -30,3 +30,7 @@ navigation:
                 label: Staff
                 url: emedia/teammanagement/staff
                 icon: icon-briefcase
+            side-menu-item5:
+                label: Stadiums
+                url: emedia/teammanagement/stadiums
+                icon: icon-ticket

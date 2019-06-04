@@ -24,3 +24,9 @@ fields:
         mode: datetime
         span: auto
         type: datepicker
+    stadium:
+        label: Stadium
+        span: auto
+        nameFrom: name
+        descriptionFrom: description
+        type: relation
