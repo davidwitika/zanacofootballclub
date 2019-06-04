@@ -6,10 +6,14 @@ child_of = "mey_no_parent"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
-
-[staticBreadcrumbs breadcrumbs]
-
 [siteSearchInclude]
+[blogPosts featuredPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "category"
+postPage = "post"
 ==
 <?php
 function onEnd()
@@ -21,17 +25,48 @@ function onEnd()
 <div class="site-content">
     <div class="container">
         <div class="row">
-            <!-- Content -->
             <div class="content col-md-8">
-                <!-- Featured News -->
-                <!-- Featured News / End -->
+                {% set posts = featuredPosts.posts %}
+                <div class="posts posts--cards post-grid row">
+                    {% for post in posts %}
+                    {% set image = post.featured_images.first %}
+                    <div class="post-grid__item col-sm-6">
+                        <div class="posts__item posts__item--card posts__item card">
+                            {% if image %}
+                            <figure class="posts__thumb">
+                                <div class="posts__cat">
+                                    {% for category in post.categories %}
+                                    <span class="label posts__cat-label">{{ category.name }}</span>
+                                    {% endfor %}
+                                </div>
+                                <a href="{{ post.url }}"><img src="{{ image.getThumb(378, '270', 'crop') }}" alt=""></a>
+                            </figure>
+                            {% endif %}
+                            <div class="posts__inner card__content">
+                                <div class="posts__cat posts__cat--flow">
+                                    {% for category in post.categories %}
+                                    <span class="label posts__cat-label">{{ category.name }}</span>
+                                    {% endfor %}
+                                </div>
+                                <time datetime="{{ post.published_at|date('Y-m-d')}}" class="posts__date">{{ post.published_at | strftime('%e %B %Y') }}</time>
+                                <h6 class="posts__title"><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                            </div>
+                            <footer class="posts__footer card__footer">
+                                <ul class="post__meta meta">
+                                    <li class="meta__item meta__item--comments"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-            <!-- Content / End -->
-            <!-- Sidebar -->
             <div id="sidebar" class="sidebar col-md-4">
-              
+                {% partial "widgets/widget-social-condensed" %}
             </div>
-            <!-- Sidebar / End -->
         </div>
     </div>
 </div>
+{% put scripts %}
+<script id="dsq-count-scr" src="//zanacofc.disqus.com/count.js" async></script>
+{% endput %}
