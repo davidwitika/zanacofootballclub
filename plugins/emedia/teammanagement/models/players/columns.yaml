@@ -2,9 +2,22 @@ columns:
     jersey_number:
         label: 'Jersey Number'
         type: number
+        searchable: true
+        sortable: true
     first_name:
         label: 'First Name'
         type: text
+        searchable: true
+        sortable: true
     last_name:
         label: 'Last Name'
         type: text
+        searchable: true
+        sortable: true
+    position_id:
+        label: Position
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: position

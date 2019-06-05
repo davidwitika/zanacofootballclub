@@ -1,20 +1,22 @@
 title = "Latest Results"
-url = "/latest-results"
+url = "/my-zanaco/latest-results"
 layout = "master"
 is_hidden = 0
 child_of = "mey_no_parent"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
+
 [builderList latestResults]
 modelClass = "emedia\TeamManagement\Models\Matches"
-scope = "-"
+scope = "scopeResults"
 scopeValue = "{{ :scope }}"
 displayColumn = "id"
 noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
 [siteSearchInclude]
 ==
 <div class="site-content">
@@ -41,7 +43,7 @@ pageNumber = "{{ :page }}"
                         <tbody>
                             {% for result in latestResults.records %}
                             <tr>
-                                <td class="team-result__date">{{ result.match_date | strftime('%e %B %Y') }}</td>
+                                <td class="team-result__date">{{ result.match_date | strftime('%e %B %Y %H:%M') }}</td>
                                 <td class="team-result__vs">
                                     <div class="team-meta">
                                         <figure class="team-meta__logo">

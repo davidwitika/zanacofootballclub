@@ -2,9 +2,31 @@ columns:
     id:
         label: ID
         type: number
-    score_home:
-        label: 'Score Home'
+        searchable: true
+        sortable: true
+    team_home:
+        label: 'Home Team'
         type: text
-    score_away:
-        label: 'Score Away'
+        searchable: true
+        sortable: true
+        select: name
+        relation: match_team_home
+    team_away:
+        label: 'Away Team'
         type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: match_team_away
+    stadium_id:
+        label: Stadium
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: stadium
+    match_date:
+        label: Date
+        type: datetime
+        searchable: true
+        sortable: true

@@ -41,12 +41,12 @@ items:
             isExternal: '0'
         items:
             -
-                title: Players
+                title: 'Latest Results'
                 nesting: ''
                 type: cms-page
                 url: ''
                 code: ''
-                reference: players
+                reference: latest-results
                 cmsPage: ''
                 replace: ''
                 viewBag:
@@ -60,6 +60,19 @@ items:
                 url: ''
                 code: ''
                 reference: fixtures
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Players
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: players
                 cmsPage: ''
                 replace: ''
                 viewBag:
@@ -88,15 +101,6 @@ items:
                 reference: technical-staff
                 cmsPage: ''
                 replace: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Latest Results'
-                type: cms-page
-                code: ''
-                reference: latest-results
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
