@@ -6,7 +6,6 @@ child_of = "home"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
-
 [builderList latestResults]
 modelClass = "emedia\TeamManagement\Models\Matches"
 scope = "scopeResults"
@@ -16,12 +15,10 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
-
 [siteSearchInclude]
 ==
 <div class="site-content">
     <div class="container">
-        <!-- Team Latest Results -->
         <div class="card card--has-table">
             <div class="card__header card__header--has-btn">
                 <h4>Latest Results</h4>
@@ -36,8 +33,6 @@ pageNumber = "{{ :page }}"
                                 <th class="team-result__vs">Away</th>
                                 <th class="team-result__score">Score</th>
                                 <th class="team-result">Venue</th>
-                                
-                                <th class="team-result__game-overview">Game Overview</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,10 +59,8 @@ pageNumber = "{{ :page }}"
                                         </div>
                                     </div>
                                 </td>
-
                                 <td class="team-result__score"><span class="team-result__game">{{ result.score }}</td>
                                 <td class="team-result">{{ result.stadium.name }}</td>
-                                <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -75,6 +68,5 @@ pageNumber = "{{ :page }}"
                 </div>
             </div>
         </div>
-        <!-- Team Latest Results / End -->
     </div>
 </div>

@@ -10,10 +10,6 @@ navigation:
         url: emedia/teammanagement/positions
         icon: icon-life-ring
         sideMenu:
-            side-menu-item:
-                label: Teams
-                url: emedia/teammanagement/teams
-                icon: icon-tag
             side-menu-item2:
                 label: Positions
                 url: emedia/teammanagement/positions
@@ -22,6 +18,14 @@ navigation:
                 label: Players
                 url: emedia/teammanagement/players
                 icon: icon-user
+            side-menu-item:
+                label: Teams
+                url: emedia/teammanagement/teams
+                icon: icon-tag
+            side-menu-item5:
+                label: Stadiums
+                url: emedia/teammanagement/stadiums
+                icon: icon-ticket
             side-menu-item4:
                 label: Matches
                 url: emedia/teammanagement/matches
@@ -30,7 +34,3 @@ navigation:
                 label: Staff
                 url: emedia/teammanagement/staff
                 icon: icon-briefcase
-            side-menu-item5:
-                label: Stadiums
-                url: emedia/teammanagement/stadiums
-                icon: icon-ticket
