@@ -364,7 +364,7 @@
 /* Footer Copyright */
 .footer-copyright {
 	@include font-accent($footer-copyright-font-size);
-	color: $body-font-color;
+	color: $body-font-color-inverse;
 	text-align: center;
 
 	@media (min-width: 992px) {

@@ -25,22 +25,22 @@ $color-primary-darken: #1892ed;
 $color-dark:           #c22428;
 $color-dark-lighten:   #555555;
 $color-gray:           #9a9da2;
-$color-2:              #31404b;
+$color-2:              #1a1a1a;
 $color-3:              #07e0c4;
 $color-4:              #c2ff1f;
 $color-4-darken:       #9fe900;
 $color-secondary: 	   #f0ad4e;
-
+$color-black:          #16171a;
 $color-success:        #24d9b0;
 $color-info:           #0cb2e2;
 $color-warning:        #ff7e1f;
 $color-danger:         #f34141;
-
+$text-color:		   #000;
 $color-white:          #fff;
 
 $body-bg-color:           #edeff4;
-$body-font-color:         $color-gray;
-$body-font-color-inverse: $color-gray;
+$body-font-color:         $text-color;
+$body-font-color-inverse: $color-white;
 
 $link-color:            $color-primary-darken;
 $link-decoration:       none;
@@ -460,7 +460,7 @@ $circular-bar-label-color:    $headings-color;
 $header-bg: $color-dark;
 $header-top-bg: $color-dark-lighten;
 $header-secondary-bg: $color-dark;
-$header-primary-bg: $color-dark-lighten;
+$header-primary-bg: $color-black;
 $header-primary-alt-bg: $header-primary-bg !default; // used for Header Layout 4
 
 // Top Bar
@@ -488,14 +488,14 @@ $header-info-block-cart-sum-color-mobile:    $color-primary;
 $header-search-width-desktop:       200px;
 $header-search-width-desktop-lg:    360px;
 $header-search-icon:                #fff;
-$header-search-input-bg:            $color-dark-lighten;
+$header-search-input-bg:            $color-black;
 $header-search-input-border:        $header-search-input-bg;
-$header-search-input-bg-focus:      $color-dark-lighten;
+$header-search-input-bg-focus:      $color-black;
 $header-search-input-border-focus:  $header-search-input-bg-focus;
 
-$header-search-input-bg-mobile:            $color-dark-lighten;
+$header-search-input-bg-mobile:            $color-black;
 $header-search-input-border-mobile:        $header-search-input-bg-mobile;
-$header-search-input-bg-focus-mobile:      $color-dark-lighten;
+$header-search-input-bg-focus-mobile:      $color-black;
 $header-search-input-border-focus-mobile:  $header-search-input-bg-focus-mobile;
 
 // Mobile Header
@@ -788,7 +788,7 @@ $product-sale-color: #fff;
 //- Footer
 //- ----------------------------------------------
 $footer-widgets-bg:        $color-dark;
-$footer-secondary-bg:      #16171a;
+$footer-secondary-bg:      $color-black;
 $footer-secondary-side-bg: $color-primary;
 $footer-font-size:         14px;
 $footer-line-height:       22px;
