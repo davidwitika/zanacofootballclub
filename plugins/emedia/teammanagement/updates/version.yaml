@@ -96,3 +96,6 @@
 1.0.33:
     - 'Updated table emedia_teammanagement_stadiums'
     - builder_table_update_emedia_teammanagement_stadiums.php
+1.0.34:
+    - 'Updated table emedia_teammanagement_matches'
+    - builder_table_update_emedia_teammanagement_matches_5.php
