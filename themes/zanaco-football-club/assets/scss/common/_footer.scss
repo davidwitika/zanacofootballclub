@@ -287,18 +287,16 @@
 		.sponsors__item {
 			text-align: center;
 
+
+
 			@media (max-width: 1199px) {
 				padding: 0 10px;
 			}
 
 			@media (max-width: 767px) {
-				width: 33.3%;
 				padding: 10px;
 			}
 
-			@media (max-width: 479px) {
-				width: 50%;
-			}
 
 			@media (min-width: 992px) {
 				margin: 0 12px;

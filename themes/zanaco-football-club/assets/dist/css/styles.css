@@ -8466,13 +8466,7 @@ input.header-mobile__search-control:focus {
 }
 @media (max-width: 767px) {
   .sponsors__item {
-    width: 33.3%;
     padding: 10px;
-  }
-}
-@media (max-width: 479px) {
-  .sponsors__item {
-    width: 50%;
   }
 }
 @media (min-width: 992px) {
