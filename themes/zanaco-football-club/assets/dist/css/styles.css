@@ -12296,6 +12296,9 @@ ul.posts:not(.post-grid) {
 .widget-social--condensed .btn-social-counter + .btn-social-counter {
   margin-top: 0;
 }
+.widget-social--condensed .btn-social-counter:focus {
+  color: #fff;
+}
 .widget-social--condensed .btn-social-counter__icon {
   position: relative;
   width: 100%;

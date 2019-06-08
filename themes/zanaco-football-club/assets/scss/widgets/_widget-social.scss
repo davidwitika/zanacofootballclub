@@ -25,6 +25,10 @@
 		& + .btn-social-counter {
 			margin-top: 0;
 		}
+
+		&:focus {
+			color: $color-white;
+		}
 	}
 		.btn-social-counter__icon {
 			position: relative;
