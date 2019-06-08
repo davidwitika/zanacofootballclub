@@ -8866,6 +8866,7 @@ ul.posts:not(.post-grid) {
   line-height: 1.2em;
   vertical-align: middle;
   display: inline-block;
+  color: #fff;
 }
 @media (max-width: 991px) {
   .main-nav__megamenu .posts--simple-list .posts__date,
