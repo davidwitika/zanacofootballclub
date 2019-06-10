@@ -7196,7 +7196,7 @@ input.header-mobile__search-control:focus {
     position: relative;
     padding: 5px 0 18px 0;
     display: block;
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid #db3e42;
   }
   .main-nav .main-nav__item--shopping-cart .info-block__link-wrapper {
     overflow: hidden;
@@ -7380,7 +7380,7 @@ input.header-mobile__search-control:focus {
   }
 
   .main-nav .main-nav__list {
-    border-top: 1px solid #555555;
+    border-top: 1px solid #db3e42;
     height: 100%;
     overflow-y: auto;
     display: block;
@@ -7402,7 +7402,7 @@ input.header-mobile__search-control:focus {
     background-color: transparent;
     color: #fff;
     line-height: 1.5em;
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid #db3e42;
     position: static;
   }
   .main-nav .main-nav__list li.has-children > a::after {
@@ -7419,7 +7419,7 @@ input.header-mobile__search-control:focus {
     display: none;
     position: relative;
     top: 0;
-    background-color: #555555;
+    background-color: #16171a;
     border: none;
     padding: 15px 0;
     visibility: visible;
@@ -7428,7 +7428,7 @@ input.header-mobile__search-control:focus {
     line-height: 1.5em;
     font-size: 10px;
     padding: 7px 0 7px 40px;
-    color: #9a9da2;
+    color: #fff;
     transition: color 0.3s ease;
     border-bottom: none;
     display: block;
@@ -7459,8 +7459,8 @@ input.header-mobile__search-control:focus {
     padding-left: 60px;
   }
   .main-nav__list .main-nav__megamenu {
-    background-color: #555555;
-    color: #9a9da2;
+    background-color: #16171a;
+    color: #fff;
     display: none;
     position: relative;
     top: 0;
@@ -7516,7 +7516,7 @@ input.header-mobile__search-control:focus {
     padding: 7px 20px 7px 40px;
     line-height: 1.5em;
     font-size: 10px;
-    color: #9a9da2;
+    color: #fff;
   }
   .main-nav__list .main-nav__megamenu > ul > li > a:hover,
 .main-nav__list .main-nav__megamenu .main-nav__ul > li > a:hover {

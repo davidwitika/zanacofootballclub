@@ -549,10 +549,10 @@ $nav-sub-megamenu-post-title-color: #fff;
 $nav-mobile-width: 270px;
 $nav-mobile-bg: $color-dark;
 $nav-mobile-color: #fff;
-$nav-mobile-border: $color-dark-lighten;
+$nav-mobile-border: lighten($color-primary,10%);
 $nav-mobile-font-size: 11px;
-$nav-mobile-sub-bg: $color-dark-lighten;
-$nav-mobile-sub-color: $color-gray;
+$nav-mobile-sub-bg: $color-black;
+$nav-mobile-sub-color: $color-white;
 
 // Header Cart
 $header-cart-width:                    360px;
