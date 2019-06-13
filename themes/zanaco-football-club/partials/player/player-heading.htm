@@ -16,7 +16,7 @@
 			<!-- Player Photo -->
 			<div class="player-info__item player-info__item--photo">
 				<figure class="player-info__photo">
-					<img src="{{ record.profile_image|media }}" alt="">
+					<img src="{{ record.profile_image| media | resize(340, auto, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="">
 				</figure>
 			</div>
 			<!-- Player Photo / End -->

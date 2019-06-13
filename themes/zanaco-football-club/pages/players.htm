@@ -33,7 +33,7 @@ sortColumn = "jersey_number"
                         <div class="team-roster__content-wrapper">
                             <!-- Player Photo -->
                             <figure class="team-roster__player-img">
-                                <img src="{{ player.profile_image|media }}" alt="">
+                                <img src="{{ player.profile_image| media | resize(340, auto, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="">
                             </figure>
                             <!-- Player Photo / End-->
                             <!-- Player Name -->

@@ -35,7 +35,7 @@ sortDirection = "asc"
                         <div class="team-roster__content-wrapper">
 
                              <figure class="team-roster__player-img">
-                                <img src="{{ staffMember.profile_image|media }}" alt="">
+                                <img src="{{ staffMember.profile_image| media | resize(340, auto, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="">
                             </figure>
                             <div class="team-roster__player-info">
                                 <h3 class="team-roster__player-name">
