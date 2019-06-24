@@ -23,9 +23,15 @@ fields:
         span: full
         mode: file
         type: mediafinder
+    department:
+        label: Department
+        nameFrom: name
+        descriptionFrom: description
+        span: left
+        type: relation
     position:
         label: Position
-        span: full
+        span: right
         type: text
     bio:
         label: Bio

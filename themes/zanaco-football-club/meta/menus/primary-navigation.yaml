@@ -14,19 +14,6 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: News
-        nesting: ''
-        type: cms-page
-        url: ''
-        code: ''
-        reference: news
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
         title: 'My Zanaco'
         nesting: ''
         type: url
@@ -41,25 +28,21 @@ items:
             isExternal: '0'
         items:
             -
+                title: Fixtures
+                type: cms-page
+                code: ''
+                reference: fixtures
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
                 title: 'Latest Results'
                 nesting: ''
                 type: cms-page
                 url: ''
                 code: ''
                 reference: latest-results
-                cmsPage: ''
-                replace: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Fixtures
-                nesting: ''
-                type: cms-page
-                url: ''
-                code: ''
-                reference: fixtures
                 cmsPage: ''
                 replace: ''
                 viewBag:
@@ -80,19 +63,6 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Board Members'
-                nesting: ''
-                type: cms-page
-                url: ''
-                code: ''
-                reference: board-members
-                cmsPage: ''
-                replace: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
                 title: 'Technical staff'
                 nesting: ''
                 type: cms-page
@@ -105,6 +75,28 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
+            -
+                title: Board
+                type: url
+                url: /staff/board
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: News
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: news
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
     -
         title: Shop
         nesting: ''

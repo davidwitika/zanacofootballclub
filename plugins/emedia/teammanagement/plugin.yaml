@@ -34,3 +34,7 @@ navigation:
                 label: Staff
                 url: emedia/teammanagement/staff
                 icon: icon-briefcase
+            side-menu-item6:
+                label: 'Staff Department'
+                url: emedia/teammanagement/staffdepartments
+                icon: icon-sitemap

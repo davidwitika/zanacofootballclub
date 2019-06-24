@@ -99,3 +99,12 @@
 1.0.34:
     - 'Updated table emedia_teammanagement_matches'
     - builder_table_update_emedia_teammanagement_matches_5.php
+1.0.35:
+    - 'Created table emedia_teammanagement_staff_department'
+    - builder_table_create_emedia_teammanagement_staff_department.php
+1.0.36:
+    - 'Updated table emedia_teammanagement_staff'
+    - builder_table_update_emedia_teammanagement_staff_11.php
+1.0.37:
+    - 'Updated table emedia_teammanagement_staff_department'
+    - builder_table_update_emedia_teammanagement_staff_department.php

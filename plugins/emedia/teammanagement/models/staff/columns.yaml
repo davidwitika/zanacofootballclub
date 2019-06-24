@@ -5,6 +5,11 @@ columns:
     last_name:
         label: 'Last Name'
         type: text
-    sort_order:
-        label: 'Sort Order'
-        type: number
+    staff_department_id:
+        label: Department
+        type: text
+        select: name
+        relation: department
+    position:
+        label: Position
+        type: text
