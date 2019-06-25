@@ -80,31 +80,63 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Technical staff'
+                title: Shop
                 nesting: ''
                 type: cms-page
                 url: ''
                 code: ''
-                reference: technical-staff
+                reference: shop
                 cmsPage: ''
                 replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
-    -
-        title: Shop
-        nesting: ''
-        type: cms-page
-        url: ''
-        code: ''
-        reference: shop
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
+            -
+                title: 'Board of Directors'
+                type: url
+                url: /my-zanaco/staff/board-directors
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Management
+                type: url
+                url: /my-zanaco/staff/management
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Technical Staff'
+                type: url
+                url: /my-zanaco/staff/technical-staff
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Media Team'
+                type: url
+                url: /my-zanaco/staff/media
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Kit and Logistics'
+                type: url
+                url: /my-zanaco/staff/kit-and-logistics
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: 'Who we are'
         nesting: ''
