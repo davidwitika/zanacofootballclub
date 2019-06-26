@@ -1,53 +1,5 @@
-<!-- Widget: Game Result -->
-<aside class="widget card widget--sidebar widget-game-result">
-	<div class="widget__title card__header card__header--has-btn">
-		<h4>Last Game Results</h4>
-		<a href="#" class="btn btn-default btn-outline btn-xs card-header__button">Expand Stats</a>
-	</div>
-	<div class="widget__content card__content">
-		<!-- Game Score -->
-		<div class="widget-game-result__section">
-			<div class="widget-game-result__section-inner">
-				<header class="widget-game-result__header">
-					<h3 class="widget-game-result__title">Championship Quarter Finals</h3>
-					<time class="widget-game-result__date" datetime="2016-03-24">Saturday, March 24th, 2016</time>
-				</header>
+[latestGameResults]
 
-				<div class="widget-game-result__main">
-					<!-- 1st Team -->
-					<div class="widget-game-result__team widget-game-result__team--first">
-						<figure class="widget-game-result__team-logo">
-							<a href="#"><img src="{{ '/images/soccer/logos/alchemists_last_game_results_big.png'|theme }}" alt=""></a>
-						</figure>
-						<div class="widget-game-result__team-info">
-							<h5 class="widget-game-result__team-name">Alchemists</h5>
-							<div class="widget-game-result__team-desc">Elric Bros School</div>
-						</div>
-					</div>
-					<!-- 1st Team / End -->
-
-					<div class="widget-game-result__score-wrap">
-						<div class="widget-game-result__score">
-							<span class="widget-game-result__score-result widget-game-result__score-result--winner">2</span> <span class="widget-game-result__score-dash">-</span> <span class="widget-game-result__score-result widget-game-result__score-result--loser">0</span>
-						</div>
-						<div class="widget-game-result__score-label">Final Score</div>
-					</div>
-
-					<!-- 2nd Team -->
-					<div class="widget-game-result__team widget-game-result__team--second">
-						<figure class="widget-game-result__team-logo">
-							<a href="#"><img src="{{ 'assets/images/samples/logo-l-clovers--sm.png'|theme }}" alt=""></a>
-						</figure>
-						<div class="widget-game-result__team-info">
-							<h5 class="widget-game-result__team-name">Clovers</h5>
-							<div class="widget-game-result__team-desc">St Paddy's Institute</div>
-						</div>
-					</div>
-					<!-- 2nd Team / End -->
-				</div>
-			</div>
-		</div>
-		<!-- Game Score / End -->
-	</div>
-</aside>
-<!-- Widget: Game Result / End -->
+[viewBag]
+==
+{% component 'latestGameResults' %}

@@ -7,6 +7,8 @@ class Plugin extends PluginBase {
 	public function registerComponents() {
 		return [
 			'emedia\TeamManagement\Components\UpcomingMatch' => 'upcomingmatch',
+			'emedia\TeamManagement\Components\LatestGameResults' => 'latestGameResults',
+
 		];
 	}
 
