@@ -38,8 +38,14 @@ class Staff extends Model {
 	];
 
 	public function scopeApplyDepartment($query, $departmentSlug) {
-		$department = StaffDepartments::whereSlug($departmentSlug)->first();
-		return $query->where('staff_department_id', $department->id);
+
+		try {
+			$department = StaffDepartments::whereSlug($departmentSlug)->firstOrFail();
+			return $query->where('staff_department_id', $department->id);
+		} catch (ModelNotFoundException $ex) {
+			return Redirect::to('/404');
+		}
+
 	}
 
 }
