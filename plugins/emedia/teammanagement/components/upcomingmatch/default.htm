@@ -9,7 +9,7 @@
 		<div class="match-preview">
 			<section class="match-preview__body">
 				<header class="match-preview__header">
-					<time class="match-preview__date" datetime="2017-05-17">{{ match.match_date | strftime('%e %B %Y') }}</time>
+					<time class="match-preview__date" datetime="{{ match.match_date|date('d-m-Y') }}">{{ match.match_date | strftime('%e %B %Y') }}</time>
 				</header>
 				<div class="match-preview__content">
 			<div class="match-preview__team match-preview__team--first">

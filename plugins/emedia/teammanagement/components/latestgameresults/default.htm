@@ -1,14 +1,14 @@
 {% set match = __SELF__.result %}
 {% if match %}
 <aside class="widget card widget--sidebar widget-game-result">
-	<div class="widget__title card__header card__header--has-btn">
+	<div class="widget__title card__header card__header">
 		<h4>Last Game Results</h4>
 	</div>
 	<div class="widget__content card__content">
 		<div class="widget-game-result__section">
 			<div class="widget-game-result__section-inner">
 				<header class="widget-game-result__header">
-					<time class="widget-game-result__date" datetime="2016-03-24">{{ match.match_date | strftime('%e %B %Y') }}</time>
+					<time class="widget-game-result__date" datetime="{{ match.match_date|date('d-m-Y') }}">{{ match.match_date | strftime('%e %B %Y') }}</time>
 				</header>
 
 				<div class="widget-game-result__main">
