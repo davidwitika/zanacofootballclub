@@ -2,6 +2,16 @@
 // #Album
 // --------------------------------------------------
 */
+
+div.album {
+	border: 0;
+	margin-bottom: 0px;
+
+	&:hover {
+		border: 0px;
+	}
+}
+
 .album-wrapper {
 	overflow: hidden;
 	display: block;

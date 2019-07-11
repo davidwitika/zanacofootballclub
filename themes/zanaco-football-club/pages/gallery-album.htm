@@ -1,0 +1,71 @@
+title = "Gallery Album"
+url = "/gallery-album/:slug"
+layout = "master"
+is_hidden = 0
+child_of = "gallery"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewGallery]
+slug = "{{ :slug }}"
+loop = 1
+closeOnScroll = 0
+closeOnVerticalDrag = 0
+escKey = 0
+pinchToClose = 0
+captionEl = 1
+swipeWhileZoom = 0
+maxSpreadZoom = 2
+getDoubleTapZoom = 1
+shareEl = 0
+zoomEl = 1
+fullscreenEl = 1
+arrowEl = 1
+counterEl = 1
+==
+function onEnd()
+{
+	 $_title = $this->gallery->title;
+     $this->page->title = $_title;
+}
+?>
+==
+
+<div class="site-content">
+			<div class="container">
+				<div class="content-title">
+					<h2 class="content-title__h">{{ gallery.title }}</h2>
+					<a href="{{ 'gallery' | page }}" class="btn btn-xs btn-default btn-outline">Go Back to the Albums</a>
+				</div>
+			</div>
+		
+		
+		
+			<!-- Album -->
+			<div class="album album--condensed container-fluid js-album-masonry">
+				<div class="row">
+					{% for image in gallery.images %}
+					<div class="album__item col-xs-6 col-sm-4">
+						<div class="album__item-holder">
+							<a href="{{ image.getPath }}" class="album__item-link mp_gallery">
+								<figure class="album__thumb">
+									<img src="{{ image.getThumb(500, 320, 'crop') }}" alt="">
+								</figure>
+								<div class="album__item-desc">
+									<h4 class="album__item-title">{{ image.title }}</h4>
+									<time class="album__item-date" datetime="2016-08-23">August 23rd, 2016</time>
+									<span class="album__item-btn-fab btn-fab btn-fab--clean"></span>
+								</div>
+							</a>
+	
+						</div>
+					</div>
+					{% endfor %}
+					
+				</div>
+			</div>
+		
+		</div>

@@ -41,12 +41,12 @@ items:
             isExternal: '0'
         items:
             -
-                title: Fixtures
+                title: 'Latest Results'
                 nesting: ''
                 type: cms-page
                 url: ''
                 code: ''
-                reference: fixtures
+                reference: latest-results
                 cmsPage: ''
                 replace: ''
                 viewBag:
@@ -54,12 +54,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Latest Results'
+                title: Fixtures
                 nesting: ''
                 type: cms-page
                 url: ''
                 code: ''
-                reference: latest-results
+                reference: fixtures
                 cmsPage: ''
                 replace: ''
                 viewBag:
@@ -80,12 +80,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Shop
+                title: Gallery
                 nesting: ''
                 type: cms-page
                 url: ''
                 code: ''
-                reference: shop
+                reference: gallery
                 cmsPage: ''
                 replace: ''
                 viewBag:
@@ -95,7 +95,7 @@ items:
             -
                 title: 'Board of Directors'
                 type: url
-                url: /my-zanaco/staff/board-directors
+                url: my-zanaco/staff/board-directors
                 code: ''
                 viewBag:
                     isHidden: '0'
@@ -103,36 +103,52 @@ items:
                     isExternal: '0'
             -
                 title: Management
+                nesting: ''
                 type: url
                 url: /my-zanaco/staff/management
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Technical Staff'
+                nesting: ''
                 type: url
                 url: /my-zanaco/staff/technical-staff
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Media Team'
+                nesting: ''
                 type: url
                 url: /my-zanaco/staff/media
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Kit and Logistics'
+                nesting: ''
                 type: url
                 url: /my-zanaco/staff/kit-and-logistics
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -144,6 +160,19 @@ items:
         url: ''
         code: ''
         reference: who-we-are
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Shop
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: shop
         cmsPage: ''
         replace: ''
         viewBag:

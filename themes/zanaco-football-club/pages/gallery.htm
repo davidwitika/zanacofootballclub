@@ -1,0 +1,45 @@
+title = "Gallery"
+url = "/my-zanaco/gallery"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[albums]
+sortBy = "title-asc"
+galleryPage = "gallery-album"
+==
+<div class="site-content">
+    <div class="container">
+        <div class="gallery row">
+            {% for album in albums %}
+            <div class="gallery__item col-6 col-sm-4">
+                <a href="{{ album.url}}" class="gallery__item-inner card">
+               
+                    <figure class="gallery__thumb">
+                         {% if album.cover %}
+                             <img src="{{ album.cover.getThumb(378,270,'crop') }}" alt="Album Image">
+                         {% else %}
+                             <img src="{{ album.images[0].getThumb(378,270,'crop') }}" alt="Album Image">
+                         {% endif %}
+                        <span class="btn-fab gallery__btn-fab"></span>
+                    </figure>
+                    <div class="gallery__content card__content">
+                        <span class="gallery__icon">
+                            <span class="icon-camera"></span>
+                        </span>
+                        <div class="gallery__details">
+                            <h4 class="gallery__name">{{ album.title }}</h4>
+                            <div class="gallery__date">{{ album.published_at|strftime('%e %B %Y') }}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+</div>
