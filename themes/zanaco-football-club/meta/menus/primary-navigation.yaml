@@ -95,7 +95,7 @@ items:
             -
                 title: 'Board of Directors'
                 type: url
-                url: my-zanaco/staff/board-directors
+                url: /my-zanaco/staff/board-directors
                 code: ''
                 viewBag:
                     isHidden: '0'
