@@ -56,7 +56,7 @@ function onEnd()
 								</figure>
 								<div class="album__item-desc">
 									<h4 class="album__item-title">{{ image.title }}</h4>
-									<time class="album__item-date" datetime="2016-08-23">August 23rd, 2016</time>
+									<time class="album__item-date" datetime="{{ image.published_at|date('Y-m-d')}}">{{ image.published_at|strftime('%e %B %Y') }}</time>
 									<span class="album__item-btn-fab btn-fab btn-fab--clean"></span>
 								</div>
 							</a>
