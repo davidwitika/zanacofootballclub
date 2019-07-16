@@ -36,23 +36,29 @@ code = "footer-navigation"
         </div>
         <div class="container">
                 <div class="sponsors">
-                    <h6 class="sponsors-title">Our Sponsors:</h6>
                     <ul class="sponsors-logos">
                         <li class="sponsors__item">
-                            <a href="https://www.zanaco.co.zm/" target="_blank"><img src="{{ 'assets/images/zanaco-sponsor-logo.png'|theme }}" alt=""></a>
+                            <a href="https://www.zanaco.co.zm/" target="_blank"><img src="{{ 'assets/images/zanaco-sponsor-logo.png'|theme }}" alt="ZANACO logo"></a>
+                        </li>
+                        <li class="sponsors__item">
+                            <a href="#" target="_blank"><img src="{{ 'assets/images/faz-logo.png'|theme }}" alt="Football Association of Zambia logo"></a>
+                        </li>
+                        <li class="sponsors__item">
+                            <a href="https://www.cafonline.com" target="_blank"><img src="{{ 'assets/images/caf-logo.png'|theme }}" alt="CAF logo"></a>
+                        </li>
+                        <li class="sponsors__item">
+                            <a href="https://www.fifa.com/" target="_blank"><img src="{{ 'assets/images/fifa-logo.png'|theme }}" alt="FIFA logo"></a>
                         </li>
                     </ul>
                 </div>
             </div>
     </div>
-    <!-- Footer Widgets / End -->
-    <!-- Footer Secondary -->
     <div class="footer-secondary">
         <div class="container">
             <div class="footer-secondary__inner">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="footer-copyright"><a href="{{ 'home'| page }}">ZANACO</a> 2019 &nbsp; | &nbsp; All Rights Reserved</div>
+                        <div class="footer-copyright"><a href="{{ 'home'| page }}">ZANACO Football Club</a> 2019 &nbsp; | &nbsp; All Rights Reserved</div>
                     </div>
                     <div class="col-md-8">
                         {% partial 'component/footer-menu-items' items=footerNavigation.menuItems %}
@@ -61,6 +67,4 @@ code = "footer-navigation"
             </div>
         </div>
     </div>
-    <!-- Footer Secondary / End -->
 </footer>
-<!-- Footer / End -->
