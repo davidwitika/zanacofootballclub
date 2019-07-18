@@ -158,32 +158,6 @@ items:
                     cssClass: ''
                     isExternal: '0'
     -
-        title: 'Who we are'
-        nesting: ''
-        type: cms-page
-        url: ''
-        code: ''
-        reference: who-we-are
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Shop
-        nesting: ''
-        type: cms-page
-        url: ''
-        code: ''
-        reference: shop
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
         title: Supporters
         type: url
         url: '#'
@@ -211,3 +185,25 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
+    -
+        title: Shop
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: shop
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Who we are'
+        type: cms-page
+        code: ''
+        reference: who-we-are
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
