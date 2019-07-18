@@ -12,15 +12,7 @@ sorting = "no"
 <div class="site-content">
     <div class="container">
         <div class="row">
-            <!-- Products -->
-            <div class="col-md-9 order-md-2">
-                <!-- Shop List -->
-                <div class="card card--clean">
-                    <header class="card__header card__header--shop-filter">
-                        {% partial 'shop/shop-filter' %}
-                    </header>
-                </div>
-    
+            <div class="col-md-9 order-md-1">
                 {% set obProductList = ProductList.make().sort(ProductList.getSorting()).active() %}
                 {% if obProductList.isNotEmpty() %}
                 <div class="card__content">
@@ -51,13 +43,6 @@ sorting = "no"
                 </div>
                 {% endif %}
             </div>
-            <!-- Products / End -->
-            <!-- Sidebar -->
-            <div class="sidebar sidebar--shop col-md-3 order-md-1">
-                {% partial 'widgets/widget-categories' %}
-                {% partial 'widgets/widget-filter-price' %}
-            </div>
-            <!-- Sidebar / End -->
         </div>
     </div>
 </div>
