@@ -94,9 +94,13 @@ items:
                     isExternal: '0'
             -
                 title: 'Board of Directors'
+                nesting: ''
                 type: url
                 url: /my-zanaco/staff/board-directors
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -179,3 +183,31 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: Supporters
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Membership
+                type: cms-page
+                code: ''
+                reference: membership
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Seasonal Tickets'
+                type: cms-page
+                code: ''
+                reference: seasonal-tickets
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
