@@ -1,6 +1,7 @@
 <?php namespace emedia\TeamManagement\Models;
 
 use emedia\TeamManagement\Models\StaffDepartments;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Model;
 use Str;
 
@@ -43,7 +44,7 @@ class Staff extends Model {
 			$department = StaffDepartments::whereSlug($departmentSlug)->firstOrFail();
 			return $query->where('staff_department_id', $department->id);
 		} catch (ModelNotFoundException $ex) {
-			return Redirect::to('/404');
+			return null;
 		}
 
 	}
