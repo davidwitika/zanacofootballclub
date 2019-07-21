@@ -119,14 +119,10 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Technical Staff'
-                nesting: ''
+                title: 'Technical Bench'
                 type: url
-                url: /my-zanaco/staff/technical-staff
+                url: /my-zanaco/staff/technical-bench
                 code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -159,9 +155,13 @@ items:
                     isExternal: '0'
     -
         title: Supporters
+        nesting: ''
         type: url
         url: '#'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -169,18 +169,26 @@ items:
         items:
             -
                 title: Membership
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: ''
                 reference: membership
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Seasonal Tickets'
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: ''
                 reference: seasonal-tickets
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -200,9 +208,13 @@ items:
             isExternal: '0'
     -
         title: 'Who we are'
+        nesting: ''
         type: cms-page
+        url: ''
         code: ''
         reference: who-we-are
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
