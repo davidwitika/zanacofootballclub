@@ -1,11 +1,17 @@
 title = "Latest Results"
 url = "/my-zanaco/latest-results"
 layout = "master"
+meta_title = "Latest Results"
+meta_description = "ZANACO FC latest match results."
 is_hidden = 0
 child_of = "home"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
+seo_keywords = "ZANACO FC, Matches, Results"
+robot_index = "index"
+robot_follow = "follow"
+
 [builderList latestResults]
 modelClass = "emedia\TeamManagement\Models\Matches"
 scope = "scopeResults"
@@ -15,6 +21,7 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
 [siteSearchInclude]
 ==
 <div class="site-content">

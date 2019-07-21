@@ -20,7 +20,7 @@ function onEnd()
     $_player= $this->components['player']; 
     $_player = $_player->record; // post is the alias of my component
     $_title = $_player->name;
-    $this->page->title = $_title;
+    $this->layout->components['SeoCmsPage']->seo_title = $_title;
 }
 ?>
 ==

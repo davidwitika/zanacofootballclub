@@ -29,7 +29,7 @@ counterEl = 1
 function onEnd()
 {
 	 $_title = $this->gallery->title;
-     $this->page->title = $_title;
+     $this->layout->components['SeoCmsPage']->seo_title = $_title;
 }
 ?>
 ==

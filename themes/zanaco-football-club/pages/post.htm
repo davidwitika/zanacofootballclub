@@ -6,10 +6,15 @@ child_of = "news"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "category"
+
+[SeoBlogPost]
+post = "post"
 ==
 <?php
 function onEnd()
@@ -23,6 +28,7 @@ function onEnd()
 }
 ?>
 ==
+{% component 'SeoBlogPost' data=post %}
 <div class="site-content">
     <div class="container">
         <div class="row">

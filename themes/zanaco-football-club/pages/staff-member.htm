@@ -21,7 +21,7 @@ function onEnd()
     $_staffMember= $this->components['staffMember']; 
     $_staffMember = $_staffMember->record; 
     $_title = $_staffMember->name;
-    $this->page->title = $_title;
+    $this->layout->components['SeoCmsPage']->seo_title = $_title;
 }
 ?>
 ==
