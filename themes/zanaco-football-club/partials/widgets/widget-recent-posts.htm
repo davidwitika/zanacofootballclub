@@ -1,0 +1,39 @@
+[blogPosts recentPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "post"
+
+[viewBag]
+==
+<aside class="widget widget--sidebar card widget-popular-posts">
+    <div class="widget__title card__header">
+        <h4>Recent Articles</h4>
+    </div>
+    <div class="widget__content card__content">
+        <ul class="posts posts--simple-list">
+            {% set posts = recentPosts.posts %}
+            {% for post in posts %}
+            {% set image = post.featured_images.first %}
+            <li class="posts__item posts__item">
+            	{% if image %}
+                <figure class="posts__thumb">
+                    <a href="{{ post.url }}"><img src="{{ image.getThumb(80, '80', 'crop') }}" alt=""></a>
+                </figure>
+                {% endif %}
+                <div class="posts__inner">
+                    <div class="posts__cat">
+                        {% for category in post.categories %}
+                        <span class="label posts__cat-label">{{ category.name }}</span>
+                        {% endfor %}
+                    </div>
+                    <h6 class="posts__title"><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                    <time datetime="{{ post.published_at|date('Y-m-d')}}" class="posts__date">{{ post.published_at | strftime('%e %B %Y') }}</time>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>
