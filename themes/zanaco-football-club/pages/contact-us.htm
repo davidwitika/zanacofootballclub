@@ -1,0 +1,41 @@
+title = "Contact Us"
+url = "/contact-us"
+layout = "master"
+is_hidden = 0
+child_of = "home"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[contactForm]
+==
+<div class="site-content">
+    <div class="container">
+        <!-- Contact Area -->
+        <div class="card">
+            <header class="card__header">
+                <h4>Contact Form</h4>
+            </header>
+            <div class="card__content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Questions? Send us a Message!</h5>
+                        <p>
+                            To contact the club by email fill in the form.
+
+                            Please keep correspondence polite and courteous at all times, even if you wish to make a complaint. Our staff will do their best to help with your enquiry but they will be unable to respond to any abusive messages.
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                    
+                    {% component 'contactForm' %}
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Area / End -->
+    </div>
+</div>

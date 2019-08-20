@@ -1,5 +1,6 @@
-name: 'Zanaco Football Club'
+name: 'ZANACO Football Club'
 description: ''
-author: ''
-homepage: ''
+author: 'eMedia'
+homepage: 'http://emediazambia.com'
+form: config/fields.yaml
 code: ''

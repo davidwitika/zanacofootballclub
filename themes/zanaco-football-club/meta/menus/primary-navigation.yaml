@@ -120,9 +120,13 @@ items:
                     isExternal: '0'
             -
                 title: 'Technical Bench'
+                nesting: ''
                 type: url
                 url: /my-zanaco/staff/technical-bench
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -207,15 +211,30 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Who we are'
-        nesting: ''
-        type: cms-page
-        url: ''
+        title: 'Club Info'
+        type: url
+        url: '#'
         code: ''
-        reference: who-we-are
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Who we are'
+                type: cms-page
+                code: ''
+                reference: who-we-are
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Contact Us'
+                type: cms-page
+                code: ''
+                reference: contact-us
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'

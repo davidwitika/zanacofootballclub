@@ -1,0 +1,9 @@
+tabs:
+  fields:
+    # Banner
+    page_banner:
+      span: left
+      tab: Banner
+      label: Banner image
+      type: mediafinder
+      mode: image
