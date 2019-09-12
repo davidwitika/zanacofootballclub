@@ -3,6 +3,8 @@ url = "/who-we-are"
 layout = "master"
 description = "about us"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
 child_of = "home"
 hide_crumb = 0
 remove_crumb_trail = 0
@@ -19,21 +21,18 @@ crumb_disabled = 0
                 <article class="card card--lg post post--single">
                     <div class="card__content">
                         <header class="post__header">
-                            <h2>About us</h2>
+                        <style> 
+        /* Responsive Container for iFrame */
+        .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+        .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 93%; }
+                        </style>
+                        <h2>About us</h2>
                         </header>
                         <div class="post__content">
-                            <p>
-                                Who We Are
-                                Zanaco FC is a Zambian football club based in Lusaka. The club started as a staff social football team in 1978. The team was launched at Lotus Inn in Lusaka by management trainees of Zambia National Commercial Bank. Some of the notable founding members include Lloyd Choongo, Ben Banda, Nathan Lupupa and John Kasengele. Starting from the 1980s, Zanaco started growing steadily from a mere social club to becoming one of the most successful and decorated club in Zambian football history. In the late 1980s and 1990s the club featured players such as Stanford Kayame the current team manager, Desmond Mugau, Obed Bunda, late James Phiri, late Allan Chiluba, late Chaswe Nsofwa and many more.
-                                Over the years the Sunset Stadium-based team has won:
-                                7 Super League trophies in 2002, 2003,2004, 2007, 2009, 2012 and 2016
-                                Charity Shields, 1 Coca-Cola Cup, 1 Mosi Cup and 3 BP Cups and 1 Barclays Cup
-                                Zanaco Football Club is the only team outside of Zambia's Copperbelt Province to have not only won but also defended the Super League Trophy.
-                                Zanaco is an acronym that stands for Zambia National Commercial Bank.
-                                Today Zanaco Football Club has become a household name in Zambia football. It is now regarded as one of the big football clubs in Zambia and on the African continent.
-                                In CAF champions league and CAF Conferderations cup, Zanaco Fc has played against big teams such has Enyimba of Nigeria, TP Mazembe of Congo DR, Esperence of Tunisia, Olando Pirates of South Africa, Uganda Revenue of Uganda, Simba Stars of Tanzania, JSK of Algeria, Wydad Casablanca SC and Raja Casablanca of Morocco, just mention a few.
-                                Because of Zanaco FC consistence and good performances since promotion to the super league in the 1990s a prefix “Sensational’’ was coined and added to its name as “Sensational Zanaco Football Club” and later in the 2000s earned a nick name “Zambia B” after most of its player were called to play at the National Team.
-                            </p>
+                        
+                     <div class='embed-container embed-responsive embed-responsive-4by3'>
+		 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRiHrRmoJTzCVuasfNUxplVPhj2QPbAC8_YP_MAa4xI5r6_u0-H5Nb944QS4DJJACf7u55khtQZcgd9/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="1000px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
                         </div>
                     </div>
                 </article>
@@ -44,6 +43,12 @@ crumb_disabled = 0
             <div class="sidebar sidebar--player col-md-4">
             </div>
             <!-- Player Sidebar / End -->
+               <!-- Sidebar -->
+         <div id="sidebar" class="sidebar col-md-4">
+                {% partial "widgets/widget-social-condensed" %}
+               
+            </div>
+            <!-- Sidebar / End -->
         </div>
     </div>
 </div>
