@@ -1,0 +1,68 @@
+{{ form_ajax(__SELF__ ~ '::onFormSubmit') }}
+	 {{ form_token() }}
+	 <div id="{{ __SELF__ }}_forms_flash"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="contact-form-first-name">First Name <span class="required">*</span></label>
+                <input type="text" name="first_name" id="first-name" class="form-control" placeholder="Your first name...">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="contact-form-last-name">Last Name <span class="required">*</span></label>
+                <input type="text" name="last_name" id="last-name" class="form-control" placeholder="Your last name...">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-form-id-number">ID Number (NRC/Passport No) <span class="required">*</span></label>
+        <input type="text" name="id_number" id="id-number" class="form-control" placeholder="Your ID Number...">
+    </div>
+      <div class="form-group">
+        <label for="contact-form-">Ticket type <span class="required">*</span></label>
+        <select class="form-control" name="ticket_type" id="ticket-type">
+        	<option value="Grand Stand">Grand Stand - K600</option>
+        	<option value="VIP">VIP - K1400</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="contact-form-date-of-birth">Date of Birth <span class="required">*</span></label>
+        <input type="text" name="date_of_birth" id="date-of-birth" class="form-control" placeholder="Your date of birth...">
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="contact-form-mobile-number">Mobile Number <span class="required">*</span></label>
+                <input type="text" name="mobile_number" id="mobile-number" class="form-control" placeholder="Your mobile number...">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="contact-form-email">Email Addresss <span class="required">*</span></label>
+                <input type="name" name="email" id="email" class="form-control" placeholder="Your email address...">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="contact-form-residential-address">Residential Address <span class="required">*</span></label>
+                <input type="text" name="residential_address" id="contact-form-residential-address" class="form-control" placeholder="Your residential address...">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="contact-form-occupation">Occupation <span class="required">*</span></label>
+                <input type="name" name="occupation" id="occupation" class="form-control" placeholder="Your occupation...">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-form-proof-of-payment">Proof of Payment <span class="required">*</span></label>
+        {% partial '@file-upload' %}
+    </div>
+    <div class="form-group form-group--submit">
+        <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary-inverse btn-lg btn-block">Apply</button>
+    </div>
+{{ form_close() }}

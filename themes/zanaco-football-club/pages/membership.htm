@@ -8,19 +8,131 @@ remove_crumb_trail = 0
 crumb_disabled = 0
 robot_index = "index"
 robot_follow = "follow"
+
+[uploadForm seasonalTicketsForm]
+group = "Seasonal Tickets/Membership"
+rules[first_name] = "required"
+rules[last_name] = "required"
+rules[email] = "required|email"
+rules[mobile_number] = "required"
+rules[occupation] = "required"
+rules[id_number] = "required"
+rules[residential_address] = "required"
+rules[ticket_type] = "required"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "Season Ticket/Membership Application"
+mail_recipients[] = "info@zanacofc.co.zm"
+mail_replyto = "email"
+mail_uploads = 1
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+uploader_enable = 1
+uploader_multi = 0
+placeholderText = "Click or drag files to upload"
+removeText = "Are you sure ?"
+maxSize = 1
+fileTypes[] = "jpg"
+fileTypes[] = "jpeg"
+fileTypes[] = "bmp"
+fileTypes[] = "png"
+fileTypes[] = "webp"
+fileTypes[] = "gif"
+fileTypes[] = "svg"
+fileTypes[] = "js"
+fileTypes[] = "map"
+fileTypes[] = "ico"
+fileTypes[] = "css"
+fileTypes[] = "less"
+fileTypes[] = "scss"
+fileTypes[] = "ics"
+fileTypes[] = "odt"
+fileTypes[] = "doc"
+fileTypes[] = "docx"
+fileTypes[] = "ppt"
+fileTypes[] = "pptx"
+fileTypes[] = "pdf"
+fileTypes[] = "swf"
+fileTypes[] = "txt"
+fileTypes[] = "xml"
+fileTypes[] = "ods"
+fileTypes[] = "xls"
+fileTypes[] = "xlsx"
+fileTypes[] = "eot"
+fileTypes[] = "woff"
+fileTypes[] = "woff2"
+fileTypes[] = "ttf"
+fileTypes[] = "flv"
+fileTypes[] = "wmv"
+fileTypes[] = "mp3"
+fileTypes[] = "ogg"
+fileTypes[] = "wav"
+fileTypes[] = "avi"
+fileTypes[] = "mov"
+fileTypes[] = "mp4"
+fileTypes[] = "mpeg"
+fileTypes[] = "webm"
+fileTypes[] = "mkv"
+fileTypes[] = "rar"
+fileTypes[] = "xml"
+fileTypes[] = "zip"
 ==
 <div class="site-content">
-    <div class="container">
-        <div class="error-404">
+    <div class="section">
+        <div class="container">
             <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <header class="error__header">
-                        <h2 class="error__title">Membership Page Coming Soon</h2>
-                        <h3 class="error__subtitle">This page is currently under development. Stay tuned for the update!</h3>
-                    </header>
-                    <footer class="error__cta">
-                        <a href="{{ 'home'| page }}" class="btn btn-primary-inverse">Return to Home</a>
-                    </footer>
+                <div class="col-md-7">
+                    <h2>Become a member</h2>
+                    <p>
+                        ZANACO FC memberships offering priority ticket access for the 2019/20 season are now on sale.
+                    </p>
+                    <p>
+                        This year we are offering all members exclusive access to some of the most exciting prizes and events around!
+                    </p>
+                    <p>
+                         Become a proud member today and join us for what promises to be an exhilarating season.
+                    </p>
+                    <p>
+                         Become a member today and be part of something bigger
+                    </p>
+                    
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ 'assets/images/zanaco-fc-fans.jpg'|theme }}" alt="Seasonal Tickets">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <header class="card__header">
+                            <h4>Membership/Season Ticket Form</h4>
+                        </header>
+                        <div class="card__content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>How do I Pay?</h5>
+                                    <p>
+                                        Membership/Season ticket fee can be deposited in the ZANACO Football Club Account No.
+                                        0250442500345, Branch: Lusaka Business Centre, Sort Code:010003,
+                                        Swift Code: ZNCOZMLU. Attach deposit slip or mobile banking reference number.
+                                    </p>
+                                </div>
+                                <div class="col-md-8">
+                                    {% component 'seasonalTicketsForm' %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
